@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"-->
+<!--            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--        <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
+<!--    <a class="navbar-brand" href="/home">Home</a>-->
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span> </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/allBooks">AllBooks  <span class="sr-only">(current)</span> </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/addBooks">AddBooks  <span class="sr-only">(current)</span> </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active login" href="/login">LogIn</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-2 leftContainer">
+            <h1 class="font-weight-light text-lg-left">Menu:</h1>
+            <ul>
+                <li><a href="http://localhost:8080">localhost</a></li>
+                <li><a href="https://allegro.pl">www.allegro.pl</a></li>
+                <li><a href="https://helion.pl">helion.pl</a></li>
+                <li><a href="https://google.pl">https://google.pl</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-7 middleContainer">
+            <h1 class="font-weight-light text-lg-left">List of available books:</h1>
+
+            <article>
+                <table>
+                    <!--/*@thymesVar id="books" type="java"*/-->
+                    <tr th:each="product: ${product}">
+                        <!--/*@thymesVar id="id" type="java"*/-->
+                        <!--/*@thymesVar id="id" type="java"*/-->
+                        <!--/*@thymesVar id="IDBook" type="java"*/-->
+                        <td th:text="${product.idproduct}"/>
+                        <td th:text="${product.title}"/>
+                        <td th:text="${product.author}"/>
+
+                    </tr>
+                </table>
+            </article>
+        </div>
+        <div class="col-12 col-md-3 rightContainer">
+            <h1 class="font-weight-light text-lg-left">Gallery</h1>
+
+            <div class="row text-lg-top">
+                <div class="col-12">
+                    <a href="#" class="d-block mb-1 h-10">
+                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/pWkk7iiCoDM/400x300"
+                             alt="picture1">
+                    </a>
+                    <a href="#" class="d-block mb-1 h-10">
+                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/pWkk7iiCoDM/400x300"
+                             alt="picture1">
+                    </a>
+                    <a href="#" class="d-block mb-1 h-10">
+                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/pWkk7iiCoDM/400x300"
+                             alt="picture1">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+<br>
+<br>
+<footer> my first website Adam T</footer>
+</body>
+</html>

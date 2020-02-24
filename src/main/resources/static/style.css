@@ -1,0 +1,52 @@
+body {
+    background-color: lightcyan;
+}
+.container-fluid{
+    /*background-color: yellow;*/
+    /*max-width: 100%;*/
+}
+.login{
+    float: left;
+}
+/*.leftContainer{*/
+/* background-color: red;*/
+/*}*/
+/*.middleContainer {*/
+/*    background-color: green;*/
+
+/*}*/
+/*.rightContainer {*/
+
+/*    background-color: blue;*/
+
+/*}*/
+
+/*.navBar ul li a{*/
+/*    display: block;*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    width: 100%;*/
+/*    color: #000;*/
+/*    padding: 8px 16px;*/
+/*    text-decoration: none;*/
+/*    background-color: #555;*/
+/*}*/
+/*.leftContainer ul li a {*/
+/*    display: block;*/
+/*    !*position: fixed;*!*/
+/*    !*top: 150px;*!*/
+/*    width: 250px;*/
+/*    list-style-type: none;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    width: 200px;*/
+/*    background-color: #f1f1f1;*/
+/*}*/
+
+/*.middleContainer {*/
+
+/*}*/
+/*.rightContainer {*/
+
+/*}*/
+

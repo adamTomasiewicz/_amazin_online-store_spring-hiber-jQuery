@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="_library_spring_hibernate_auth:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>_library_spring_hibernate_auth</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="_online-store_spring-hiber-auth-jersey.war">
+      <element id="artifact" artifact-name="_library_spring_hibernate_auth:war exploded" />
+    </root>
+  </artifact>
+</component>
