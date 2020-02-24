@@ -1,12 +1,23 @@
 package online_store_app.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
 
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-
+import javax.persistence.*;
 import java.util.List;
-
-public class Book extends Product {
+@Entity
+@Table(name = "book")
+public class Book extends AbstractProduct {
+    /**atributes*/
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    protected int idProduct;
+   // @Column(name="title", nullable = false, length = 50, updatable = true)
+    protected String title;
+    protected String author;
+    protected String aboutText;
+    protected double price;
+    // protected List<String> listOfTags;
+    protected String url;
 
     public Book() {
     }
@@ -16,7 +27,7 @@ public class Book extends Product {
         this.author = author;
         this.aboutText = aboutText;
         this.price = price;
-        this.listOfTags = listOfTags;
+        //this.listOfTags = listOfTags;
         this.url = url;
     }
 
@@ -29,56 +40,64 @@ public class Book extends Product {
     }
 
     @Override
-    public void addProduct(Product product) {
-        Session session = hsfs.getSessionFactory().getCurrentSession();
-        Transaction tx = session.beginTransaction();
-        session.save(product);
-        tx.commit();
-        session.close();
+    public int getIdProduct() {
+        return idProduct;
     }
 
     @Override
-    public void updateProduct(Product product) {
-        Session session = hsfs.getSessionFactory().getCurrentSession();
-        Transaction tx = session.beginTransaction();
-        session.update(product);
-        tx.commit();
-        session.close();
+    public void setIdProduct(int idProduct) {
+        this.idProduct = idProduct;
     }
 
     @Override
-    public void deleteProduct(Product product) {
-        Session session = hsfs.getSessionFactory().getCurrentSession();
-        Transaction tx = session.beginTransaction();
-        session.delete(product);
-        tx.commit();
-        session.close();
+    public String getTitle() {
+        return title;
     }
 
     @Override
-    public Product getProductByID(Integer id) {
-        Session session = this.hsfs.getSessionFactory().getCurrentSession();
-        Transaction tx = session.beginTransaction();
-        Product product = (Product) session
-                .createQuery("FROM Product WHERE id=" + id)
-                .uniqueResult();
-        tx.commit();
-        session.close();
-        return product;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     @Override
-    public List<Product> getAllProductsFromDB() {
-        Session session = this.hsfs.getSessionFactory().getCurrentSession();
-        Transaction tx = session.beginTransaction();
-        List<Product> products = session
-                .createQuery("FROM Product ")
-                .list();
-        tx.commit();
-        session.close();
-        return products;
+    public String getAuthor() {
+        return author;
     }
 
+    @Override
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    @Override
+    public String getAboutText() {
+        return aboutText;
+    }
+
+    @Override
+    public void setAboutText(String aboutText) {
+        this.aboutText = aboutText;
+    }
+
+    @Override
+    public double getPrice() {
+        return price;
+    }
+
+    @Override
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    @Override
+    public String getUrl() {
+        return url;
+    }
+
+    @Override
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
 
 }

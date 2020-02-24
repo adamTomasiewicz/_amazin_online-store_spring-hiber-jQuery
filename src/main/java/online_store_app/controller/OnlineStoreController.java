@@ -2,11 +2,12 @@ package online_store_app.controller;
 
 
 import online_store_app.auth.Users;
-import online_store_app.model.Book;
 
-import online_store_app.model.Product;
+import online_store_app.services.BookDaoImpl;
+import online_store_app.services.UsersDaoImpl;
+import online_store_app.model.AbstractProduct;
+import online_store_app.model.Book;
 import online_store_app.model.VideoGame;
-import online_store_app.services.UserAuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,26 +17,27 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class OnlineStoreController {
+
     @Autowired
-    Product product;
+    BookDaoImpl bookDao;
     @Autowired
-    UserAuthService userAuthService;
+    UsersDaoImpl userAuthService;
 
     @GetMapping(value = "")
     public String getIndex(Model model) {
-        model.addAttribute("products", product.getAllProductsFromDB());
+        //model.addAttribute("products", bookDao.getAllProductsFromDB());
         return "index";
     }
 
     @GetMapping(value = "/home")
     public String getHome(Model model) {
-        model.addAttribute("products", product.getAllProductsFromDB());
+        model.addAttribute("products", bookDao.getAllProductsFromDB());
         return "index";
     }
 
     @GetMapping(value = "/allProducts")
     public String getAllBooks(Model model) {
-        model.addAttribute("products", product.getAllProductsFromDB());
+        model.addAttribute("products", bookDao.getAllProductsFromDB());
         return "onlineStore";
     }
 
@@ -53,8 +55,8 @@ public class OnlineStoreController {
     }
 
     @PostMapping(value = "/addProduct")
-    public String postSaveBook(@ModelAttribute Product product) {
-        product.addProduct(product);
+    public String postSaveBook(@ModelAttribute AbstractProduct abstractProduct) {
+        bookDao.addProduct((Book) abstractProduct);
         return "redirect:/allProducts";
     }
 

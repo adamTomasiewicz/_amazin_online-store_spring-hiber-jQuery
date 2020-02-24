@@ -1,4 +1,4 @@
-package online_store_app.auth;
+package online_store_app.bin;
 import online_store_app.auth.Users;
 
 import java.util.List;

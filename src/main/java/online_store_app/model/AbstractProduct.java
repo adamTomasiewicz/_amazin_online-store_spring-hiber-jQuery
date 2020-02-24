@@ -1,57 +1,42 @@
 package online_store_app.model;
 
-import online_store_app.services.HibernateSessionFactoryService;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
-
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.util.List;
 
-@Service
-public abstract class Product {
+
+public abstract class AbstractProduct {
+
     /**atributes*/
-    @Id
+
     protected int idProduct;
     protected String title;
     protected String author;
     protected String aboutText;
     protected double price;
-    protected List<String> listOfTags;
+    // protected List<String> listOfTags;
     protected String url;
-
-    @Autowired
-    public static HibernateSessionFactoryService hsfs;
-    public static HibernateSessionFactoryService getHsfs() {
-        return hsfs;
-    }
 
 
 
     /**abstract methods*/
-    public abstract void addProduct(Product product);
-    abstract void updateProduct(Product product);
-    abstract  void deleteProduct(Product product);
-    abstract Product getProductByID(Integer id);
-    public abstract List<Product> getAllProductsFromDB();
+//    public abstract void addProduct(AbstractProduct abstractProduct);
+//    abstract void updateProduct(AbstractProduct abstractProduct);
+//    abstract void deleteProduct(AbstractProduct abstractProduct);
+//    public abstract AbstractProduct getProductByID(Integer id);
+//    public abstract List<AbstractProduct> getAllProductsFromDB();
 
     /**default methods*/
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Product product = (Product) o;
-        if (idProduct != product.idProduct) return false;
-        if (Double.compare(product.price, price) != 0) return false;
-        if (title != null ? !title.equals(product.title) : product.title != null) return false;
-        if (author != null ? !author.equals(product.author) : product.author != null) return false;
-        if (aboutText != null ? !aboutText.equals(product.aboutText) : product.aboutText != null) return false;
-        if (listOfTags != null ? !listOfTags.equals(product.listOfTags) : product.listOfTags != null) return false;
-        return url != null ? url.equals(product.url) : product.url == null;
+        AbstractProduct abstractProduct = (AbstractProduct) o;
+        if (idProduct != abstractProduct.idProduct) return false;
+        if (Double.compare(abstractProduct.price, price) != 0) return false;
+        if (title != null ? !title.equals(abstractProduct.title) : abstractProduct.title != null) return false;
+        if (author != null ? !author.equals(abstractProduct.author) : abstractProduct.author != null) return false;
+        if (aboutText != null ? !aboutText.equals(abstractProduct.aboutText) : abstractProduct.aboutText != null) return false;
+       // if (listOfTags != null ? !listOfTags.equals(abstractProduct.listOfTags) : abstractProduct.listOfTags != null) return false;
+        return url != null ? url.equals(abstractProduct.url) : abstractProduct.url == null;
     }
     @Override
     public int hashCode() {
@@ -63,27 +48,27 @@ public abstract class Product {
         result = 31 * result + (aboutText != null ? aboutText.hashCode() : 0);
         temp = Double.doubleToLongBits(price);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
-        result = 31 * result + (listOfTags != null ? listOfTags.hashCode() : 0);
+       // result = 31 * result + (listOfTags != null ? listOfTags.hashCode() : 0);
         result = 31 * result + (url != null ? url.hashCode() : 0);
         return result;
     }
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Product{");
+        final StringBuilder sb = new StringBuilder("AbstractProduct{");
         sb.append("idProduct=").append(idProduct);
         sb.append(", title='").append(title).append('\'');
         sb.append(", author='").append(author).append('\'');
         sb.append(", aboutText='").append(aboutText).append('\'');
         sb.append(", price=").append(price);
-        sb.append(", listOfTags=").append(listOfTags);
+       // sb.append(", listOfTags=").append(listOfTags);
         sb.append(", url='").append(url).append('\'');
         sb.append('}');
         return sb.toString();
     }
 
     /**getters & setters*/
-    @Id
+
     public int getIdProduct() {
         return idProduct;
     }
@@ -111,18 +96,19 @@ public abstract class Product {
     public double getPrice() {
         return price;
     }
-
     public void setPrice(double price) {
         this.price = price;
     }
 
-    public List<String> getListOfTags() {
+/*
+   public List<String> getListOfTags() {
         return listOfTags;
     }
 
-    public void setListOfTags(List<String> listOfTags) {
+   public void setListOfTags(List<String> listOfTags) {
         this.listOfTags = listOfTags;
     }
+*/
 
     public String getUrl() {
         return url;

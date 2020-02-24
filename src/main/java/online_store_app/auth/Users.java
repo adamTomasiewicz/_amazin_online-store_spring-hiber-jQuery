@@ -1,9 +1,17 @@
 package online_store_app.auth;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="users")
 public class Users {
 
-    private int IDUser;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idUser;
+    @Column(name="email", nullable = false, length = 50)
     private String email;
+    @Column(name="password", nullable = false, unique = true, length = 50)
     private String password;
   //  private ESex ESex;
 
@@ -16,10 +24,10 @@ public class Users {
     }
 
     public int getIDUser() {
-        return IDUser;
+        return idUser;
     }
     public void setIDUser(int IDUser) {
-        this.IDUser = IDUser;
+        this.idUser = IDUser;
     }
     public String getEmail() {
         return email;
@@ -37,7 +45,7 @@ public class Users {
     @Override
     public String toString() {
         return "User{" +
-                "IDUser=" + IDUser +
+                "IDUser=" + idUser +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 '}';

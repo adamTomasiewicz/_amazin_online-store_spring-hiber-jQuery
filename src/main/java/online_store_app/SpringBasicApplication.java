@@ -2,14 +2,10 @@ package online_store_app;
 
 import online_store_app.auth.Users;
 import online_store_app.configuration.AppConfiguration;
-import online_store_app.model.Book;
-import online_store_app.auth.IUserAuthService;
-import online_store_app.model.Product;
+import online_store_app.services.UsersDaoImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import java.util.List;
 
 @SpringBootApplication
 public class SpringBasicApplication {
@@ -19,18 +15,18 @@ public class SpringBasicApplication {
 		AnnotationConfigApplicationContext context =
 				new AnnotationConfigApplicationContext(AppConfiguration.class);
 
-		IUserAuthService userAuthService = context.getBean(IUserAuthService.class);
+		UsersDaoImpl usersDao = context.getBean(UsersDaoImpl.class);
 		//test user
-		//User testUser = new User("adam.tomasiewicz@outlook.com","password1");
-		//userAuthService.saveUser(testUser);
-		System.out.println(userAuthService.getUserByID(1));
+		Users testUser = new Users("adam.tomasiewicz@outlook.com","password1");
+		usersDao.addProduct(testUser);
+		System.out.println(usersDao.getProductByID(1));
 
-		List<Users> listOfUsers = userAuthService.getAllUsers();
-		for (Users user: listOfUsers) {
-			System.out.println(user);
-		}
+//		List<Users> listOfUsers = userAuthService.getAllUsers();
+//		for (Users user: listOfUsers) {
+//			System.out.println(user);
+//		}
 
-		Product productService = context.getBean(Product.class);
+		//AbstractProduct abstractProductService = context.getBean(AbstractProduct.class);
 		//test Book
 		//Book testBook = new Book("Wiedzmin","Andrzej Sapkowski");
 
@@ -43,10 +39,10 @@ public class SpringBasicApplication {
 //		libraryBookService.saveBook(new Book("Potop","Henryk Sienkiewicz"));
 //		libraryBookService.saveBook(new Book("Zbrodnia i kara","Fiodor Dostoyewski"));
 
-		List<Product> listOfProducts = productService.getAllProductsFromDB();
-		for (Product product: listOfProducts) {
-			System.out.println(product);
-		}
+//		List<AbstractProduct> listOfAbstractProducts = abstractProductService.getAllProductsFromDB();
+//		for (AbstractProduct abstractProduct : listOfAbstractProducts) {
+//			System.out.println(abstractProduct);
+//		}
 		//ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 		//ILibraryBookService libraryBookService = context.getBean(ILibraryBookService.class);
 	}

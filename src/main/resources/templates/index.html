@@ -60,13 +60,13 @@
             <article>
                 <table>
                     <!--/*@thymesVar id="books" type="java"*/-->
-                    <tr th:each="product: ${product}">
+                    <tr th:each="abstractProduct: ${abstractProduct}">
                         <!--/*@thymesVar id="id" type="java"*/-->
                         <!--/*@thymesVar id="id" type="java"*/-->
                         <!--/*@thymesVar id="IDBook" type="java"*/-->
-                        <td th:text="${product.idproduct}"/>
-                        <td th:text="${product.title}"/>
-                        <td th:text="${product.author}"/>
+                        <td th:text="${abstractProduct.idproduct}"/>
+                        <td th:text="${abstractProduct.title}"/>
+                        <td th:text="${abstractProduct.author}"/>
 
                     </tr>
                 </table>

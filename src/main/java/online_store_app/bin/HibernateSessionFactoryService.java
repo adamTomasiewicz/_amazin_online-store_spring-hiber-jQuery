@@ -1,10 +1,10 @@
-package online_store_app.services;
+/*
+package online_store_app.bin;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.springframework.stereotype.Component;
 
-@Component
+
 public class HibernateSessionFactoryService {
     private static final SessionFactory sessionFactory;
     static {
@@ -26,6 +26,7 @@ public class HibernateSessionFactoryService {
         return sessionFactory;
     }
 }
+*/
 /*
         private SessionFactory sessionFactory;
 
@@ -38,4 +39,8 @@ public class HibernateSessionFactoryService {
         public Session getSession() {
             return this.sessionFactory.openSession();
         }
-    }*/
+    }*//*
+*/
+/*
+
+*/

@@ -42,7 +42,7 @@
         </form>
     </div>
 </nav>
-<form th:action="@{/addProduct}" th:object=${products} method="post">
+<form th:action="@{/addProduct}" th:object=${abstractProducts} method="post">
     <div class="form-group">
         <label for="exampleInputEmail1">Book title:
         <input type="text" th:field="*{title}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter title">

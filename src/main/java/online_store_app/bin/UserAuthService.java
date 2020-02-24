@@ -1,7 +1,7 @@
-package online_store_app.services;
+/*
+package online_store_app.auth;
 
-import online_store_app.auth.IUserAuthService;
-import online_store_app.auth.Users;
+import online_store_app.services.HibernateUtilsSF;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,11 +12,11 @@ import java.util.List;
 @Component
 public class UserAuthService implements IUserAuthService {
     @Autowired
-    public HibernateSessionFactoryService hsfs;
+    public HibernateUtilsSF hibernateUtilsSF;
 
     @Override
     public void saveUser(Users user) {
-        Session session = hsfs.getSessionFactory().getCurrentSession();
+        Session session = hibernateUtilsSF.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
         session.save(user);
         tx.commit();
@@ -25,7 +25,7 @@ public class UserAuthService implements IUserAuthService {
 
     @Override
     public void updateUser(Users user) {
-        Session session = hsfs.getSessionFactory().getCurrentSession();
+        Session session = hibernateUtilsSF.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
         session.update(user);
         tx.commit();
@@ -35,7 +35,7 @@ public class UserAuthService implements IUserAuthService {
 
     @Override
     public void deleteUser(Users user) {
-        Session session = hsfs.getSessionFactory().getCurrentSession();
+        Session session = hibernateUtilsSF.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
         session.delete(user);
         tx.commit();
@@ -44,7 +44,7 @@ public class UserAuthService implements IUserAuthService {
 
     @Override
     public Users getUserByID(Integer id) {
-        Session session = this.hsfs.getSessionFactory().getCurrentSession();
+        Session session = hibernateUtilsSF.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
         Users user = (Users) session
                 .createQuery("FROM Users WHERE id=" + id)
@@ -56,13 +56,14 @@ public class UserAuthService implements IUserAuthService {
 
     @Override
     public List<Users> getAllUsers() {
-        Session session = this.hsfs.getSessionFactory().getCurrentSession();
+        Session session = hibernateUtilsSF.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
         List<Users> users = session
-                .createQuery("FROM User ")
+                .createQuery("FROM Users ")
                 .list();
         tx.commit();
         session.close();
         return users;
     }
 }
+*/
