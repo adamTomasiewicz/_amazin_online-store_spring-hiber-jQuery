@@ -3,11 +3,14 @@ package online_store_app.controller;
 
 import online_store_app.auth.Users;
 
+import online_store_app.model.BoardGame;
+import online_store_app.services.BoardGameDaoImpl;
 import online_store_app.services.BookDaoImpl;
 import online_store_app.services.UsersDaoImpl;
 import online_store_app.model.AbstractProduct;
 import online_store_app.model.Book;
 import online_store_app.model.VideoGame;
+import online_store_app.services.VideoGameDaoImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,51 +24,76 @@ public class OnlineStoreController {
     @Autowired
     BookDaoImpl bookDao;
     @Autowired
+    BoardGameDaoImpl boardGameDao;
+    @Autowired
+    VideoGameDaoImpl videoGameDao;
+    @Autowired
     UsersDaoImpl userAuthService;
 
+    /** INDEX PAGE MAPPINGS */
     @GetMapping(value = "")
-    public String getIndex(Model model) {
-        //model.addAttribute("products", bookDao.getAllProductsFromDB());
+    public String getEmpty(Model model) {
+        model.addAttribute("books", bookDao.getAllProductsFromDB());
+        model.addAttribute("boardGames", boardGameDao.getAllProductsFromDB());
+       model.addAttribute("videoGames", videoGameDao.getAllProductsFromDB());
         return "index";
     }
-
     @GetMapping(value = "/home")
     public String getHome(Model model) {
-        model.addAttribute("products", bookDao.getAllProductsFromDB());
+        model.addAttribute("books", bookDao.getAllProductsFromDB());
+        model.addAttribute("boardGames", boardGameDao.getAllProductsFromDB());
+        model.addAttribute("videoGames", videoGameDao.getAllProductsFromDB());
         return "index";
     }
-
-    @GetMapping(value = "/allProducts")
-    public String getAllBooks(Model model) {
-        model.addAttribute("products", bookDao.getAllProductsFromDB());
-        return "onlineStore";
+    @GetMapping(value = "/index")
+    public String getIndex(Model model) {
+        model.addAttribute("books", bookDao.getAllProductsFromDB());
+        model.addAttribute("boardGames", boardGameDao.getAllProductsFromDB());
+        model.addAttribute("videoGames", videoGameDao.getAllProductsFromDB());
+        return "index";
     }
-
+    /** ONLINE-STORE PAGE MAPPINGS */
+    @GetMapping(value = "/onlineStore")
+    public String getAllBooks(Model model) {
+        model.addAttribute("books", bookDao.getAllProductsFromDB());
+        model.addAttribute("boardGames", boardGameDao.getAllProductsFromDB());
+        model.addAttribute("videoGames", videoGameDao.getAllProductsFromDB());
+        return "online-store";
+    }
+    /** ADD-PRODUCT PAGE MAPPINGS */
     @GetMapping(value = "/addProduct")
     public String getAddBooks(Model model) {
-        model.addAttribute("product", new VideoGame() {
-        });
-        return "addProduct";
+        model.addAttribute("book", new Book());
+        model.addAttribute("boardGames", new BoardGame());
+        model.addAttribute("videoGames", new VideoGame());
+        return "add-product";
     }
-
-    @GetMapping(value = "/login")
-    public String getLogin(Model model) {
-        model.addAttribute("user", new Users());
-        return "login";
-    }
-
     @PostMapping(value = "/addProduct")
     public String postSaveBook(@ModelAttribute AbstractProduct abstractProduct) {
+
         bookDao.addProduct((Book) abstractProduct);
-        return "redirect:/allProducts";
+        return "redirect:/onlineStore";
+    }
+    /** ABOUT-US PAGE MAPPINGS */
+    @GetMapping(value = "/aboutUs")
+    public String getAboutUs(Model model) {
+        // model.addAttribute("user", new Users());
+        return "about-us";
     }
 
-    @PostMapping(value = "/login")
+    /** MY-ACCOUNT PAGE MAPPINGS */
+    @GetMapping(value = "/myAccount")
+    public String getMyAccount(Model model) {
+       // model.addAttribute("user", new Users());
+        return "my-account";
+    }
+
+    @PostMapping(value = "/myAccount")
     public String postSaveUser(@ModelAttribute Users user) {
         if (user.getEmail().equals("adam") & user.getPassword().equals("adam1")) {
             System.out.println("zalogowano użytkownika adam");
             return "redirect:/home";
         }
-        else return "login";
+        else return "my-account";
     }
 }

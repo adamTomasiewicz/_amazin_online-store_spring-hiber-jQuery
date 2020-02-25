@@ -2,6 +2,8 @@ package online_store_app;
 
 import online_store_app.auth.Users;
 import online_store_app.configuration.AppConfiguration;
+import online_store_app.model.AbstractProduct;
+import online_store_app.services.AbstractProductUtils;
 import online_store_app.services.UsersDaoImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,7 +22,8 @@ public class SpringBasicApplication {
 		Users testUser = new Users("adam.tomasiewicz@outlook.com","password1");
 		usersDao.addProduct(testUser);
 		System.out.println(usersDao.getProductByID(1));
-
+		AbstractProductUtils productUtils = context.getBean(AbstractProductUtils.class);
+		productUtils.loadData();
 //		List<Users> listOfUsers = userAuthService.getAllUsers();
 //		for (Users user: listOfUsers) {
 //			System.out.println(user);

@@ -24,8 +24,7 @@ public class BookDaoImpl implements InterfaceDAO<Book> {
         SessionFactory sessionFactory = hibernateUtilsSF.getSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction tx = session.beginTransaction();
-        List<Book> books = session.createQuery("from Book ", Book.class).list();
-        session.save(books);
+        session.save(book);
         tx.commit();
         session.close();
     }
