@@ -7,6 +7,7 @@ import online_store_app.services.HibernateUtilsSF;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
@@ -17,12 +18,12 @@ import java.util.Optional;
 @Component
 public class BoardGameDaoImpl implements InterfaceDAO<BoardGame> {
 
+    @Autowired
     private HibernateUtilsSF hibernateUtilsSF;
 
-    public BoardGameDaoImpl() {
-
+   /* public BoardGameDaoImpl() {
         this.hibernateUtilsSF = new HibernateUtilsSF();
-    }
+    }*/
 
 
     @Override

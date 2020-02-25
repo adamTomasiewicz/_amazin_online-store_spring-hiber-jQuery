@@ -1,54 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="828eb40c-76c6-4f79-aa22-55432c4fe3c3" name="Default Changelist" comment="tables created, No CurrentSessionContext configured">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/online_store_app/bin/InterfaceJDBC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/online_store_app/bin/InterfaceJPA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/online_store_app/dao/InterfaceDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/online_store_app/services/AbstractProductUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/online_store_app/services/BoardGameDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/online_store_app/services/BookDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/online_store_app/services/HibernateUtilsSF.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/online_store_app/services/UsersDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/online_store_app/services/VideoGameDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/518c08d5-5d76-46b2-9e6c-2f64640c6ed6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/518c08d5-5d76-46b2-9e6c-2f64640c6ed6/storage_v2/_src_/database/bookLibrary.khlPDQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/518c08d5-5d76-46b2-9e6c-2f64640c6ed6/storage_v2/_src_/database/bookLibrary.khlPDQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/518c08d5-5d76-46b2-9e6c-2f64640c6ed6/storage_v2/_src_/database/bookLibrary.khlPDQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/518c08d5-5d76-46b2-9e6c-2f64640c6ed6/storage_v2/_src_/database/bookLibrary.khlPDQ/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8a59bfdb-3a7c-4593-921c-2d198d495e90.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8a59bfdb-3a7c-4593-921c-2d198d495e90/storage_v2/_src_/database/bookLibrary.khlPDQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8a59bfdb-3a7c-4593-921c-2d198d495e90/storage_v2/_src_/database/bookLibrary.khlPDQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8a59bfdb-3a7c-4593-921c-2d198d495e90/storage_v2/_src_/database/bookLibrary.khlPDQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8a59bfdb-3a7c-4593-921c-2d198d495e90/storage_v2/_src_/database/bookLibrary.khlPDQ/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/eaadcee3-fdb3-44a8-a81a-af95b9e0a5a8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/eaadcee3-fdb3-44a8-a81a-af95b9e0a5a8/storage_v2/_src_/database/onlineStore.Tk4BGw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/eaadcee3-fdb3-44a8-a81a-af95b9e0a5a8/storage_v2/_src_/database/onlineStore.Tk4BGw/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/eaadcee3-fdb3-44a8-a81a-af95b9e0a5a8/storage_v2/_src_/database/onlineStore.Tk4BGw/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="828eb40c-76c6-4f79-aa22-55432c4fe3c3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_library_spring_hibernate_auth.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_library_spring_hibernate_auth.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online_store_app/SpringBasicApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/online_store_app/SpringBasicApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online_store_app/auth/IUserAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/online_store_app/bin/IUserAuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online_store_app/auth/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/online_store_app/auth/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online_store_app/configuration/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/online_store_app/configuration/AppConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online_store_app/controller/OnlineStoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/online_store_app/controller/OnlineStoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online_store_app/dao/ProductListRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online_store_app/model/BoardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/online_store_app/model/BoardGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online_store_app/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/online_store_app/model/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online_store_app/model/EGenre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/online_store_app/model/EnumGenre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online_store_app/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/online_store_app/model/AbstractProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online_store_app/model/VideoGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/online_store_app/model/VideoGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online_store_app/services/HibernateSessionFactoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/online_store_app/bin/HibernateSessionFactoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online_store_app/services/LibraryBookService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online_store_app/services/UserAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/online_store_app/bin/UserAuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/old_mappings/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addProduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addProduct.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/onlineStore.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/onlineStore.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/online_store_app/services/BoardGameDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/online_store_app/services/BoardGameDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/online_store_app/services/HibernateUtilsSF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/online_store_app/services/HibernateUtilsSF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/online_store_app/services/UsersDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/online_store_app/services/UsersDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/online_store_app/services/VideoGameDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/online_store_app/services/VideoGameDaoImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,6 +157,11 @@
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
             </expand>
             <select />
           </treeState>
@@ -222,7 +185,7 @@
       <workItem from="1581502040146" duration="5817000" />
       <workItem from="1582506882759" duration="15205000" />
       <workItem from="1582549827479" duration="1687000" />
-      <workItem from="1582566929823" duration="10733000" />
+      <workItem from="1582566929823" duration="11633000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1582541114319</created>
@@ -231,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582541114319</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="tables created, No CurrentSessionContext configured">
+      <created>1582587800831</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582587800831</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,42 +241,58 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1582537435895" />
-    <state x="311" y="8" key="CommitChangelistDialog2" timestamp="1582587570461">
+    <state x="311" y="8" key="CommitChangelistDialog2" timestamp="1582587798443">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="311" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582587570461" />
-    <state width="1295" height="386" key="GridCell.Tab.0.bottom" timestamp="1582587570485">
+    <state x="311" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582587798443" />
+    <state width="1295" height="210" key="GridCell.Tab.0.bottom" timestamp="1582588599514">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1295" height="386" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582587570485" />
-    <state width="1295" height="386" key="GridCell.Tab.0.center" timestamp="1582587570485">
+    <state width="1295" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582588599514" />
+    <state width="1295" height="210" key="GridCell.Tab.0.center" timestamp="1582588599514">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1295" height="386" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582587570485" />
-    <state width="1295" height="386" key="GridCell.Tab.0.left" timestamp="1582587570484">
+    <state width="1295" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582588599514" />
+    <state width="1295" height="210" key="GridCell.Tab.0.left" timestamp="1582588599514">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1295" height="386" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582587570484" />
-    <state width="1295" height="386" key="GridCell.Tab.0.right" timestamp="1582587570485">
+    <state width="1295" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582588599514" />
+    <state width="1295" height="210" key="GridCell.Tab.0.right" timestamp="1582588599514">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1295" height="386" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582587570485" />
-    <state width="1295" height="386" key="GridCell.Tab.1.bottom" timestamp="1582587570485">
+    <state width="1295" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582588599514" />
+    <state width="1295" height="210" key="GridCell.Tab.1.bottom" timestamp="1582588599514">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1295" height="386" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582587570485" />
-    <state width="1295" height="386" key="GridCell.Tab.1.center" timestamp="1582587570485">
+    <state width="1295" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582588599514" />
+    <state width="1295" height="210" key="GridCell.Tab.1.center" timestamp="1582588599514">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1295" height="386" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1582587570485" />
-    <state width="1295" height="386" key="GridCell.Tab.1.left" timestamp="1582587570485">
+    <state width="1295" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1582588599514" />
+    <state width="1295" height="210" key="GridCell.Tab.1.left" timestamp="1582588599514">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1295" height="386" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1582587570485" />
-    <state width="1295" height="386" key="GridCell.Tab.1.right" timestamp="1582587570485">
+    <state width="1295" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1582588599514" />
+    <state width="1295" height="210" key="GridCell.Tab.1.right" timestamp="1582588599514">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1295" height="386" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1582587570485" />
+    <state width="1295" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1582588599514" />
+    <state width="1295" height="385" key="GridCell.Tab.2.bottom" timestamp="1582588599507">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1295" height="385" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582588599507" />
+    <state width="1295" height="385" key="GridCell.Tab.2.center" timestamp="1582588599507">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1295" height="385" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1582588599507" />
+    <state width="1295" height="385" key="GridCell.Tab.2.left" timestamp="1582588599506">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1295" height="385" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1582588599506" />
+    <state width="1295" height="385" key="GridCell.Tab.2.right" timestamp="1582588599507">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1295" height="385" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1582588599507" />
     <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1582539051661">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -319,10 +305,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1582539514456" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1582541146405">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1582587844895">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1582541146405" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1582587844895" />
     <state x="635" y="160" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1581472607028">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

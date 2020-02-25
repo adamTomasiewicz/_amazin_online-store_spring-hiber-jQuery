@@ -5,6 +5,7 @@ import online_store_app.dao.InterfaceDAO;
 import online_store_app.services.HibernateUtilsSF;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
@@ -16,6 +17,7 @@ import java.util.Optional;
 @Component
 public class UsersDaoImpl implements InterfaceDAO<Users> {
 
+    @Autowired
     private HibernateUtilsSF hibernateUtilsSF;
 
     public UsersDaoImpl() {

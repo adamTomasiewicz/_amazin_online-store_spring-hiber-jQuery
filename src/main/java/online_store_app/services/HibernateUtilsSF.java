@@ -9,13 +9,14 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
+import org.hibernate.context.spi.CurrentSessionContext;
 import org.hibernate.service.ServiceRegistry;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.Properties;
 
-@Service
+@Component
 public class HibernateUtilsSF {
     private final SessionFactory sessionFactory;
 
@@ -43,6 +44,7 @@ public class HibernateUtilsSF {
             properties.put(Environment.PASS, "postgres1");
             properties.put(Environment.FORMAT_SQL, "true");
             properties.put(Environment.SHOW_SQL, "true");
+            properties.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
             // properties.put(Environment.DIALECT, "PostgresSQL95Dialect");
             properties.put(Environment.HBM2DDL_AUTO, "create"); //actions on tables: update / create / create-drop / none
             //add properties to configuration
