@@ -1,22 +1,24 @@
 -------
---ABOUT:
+### ABOUT:
 --------
-Chcemy zrobić serwis internetowy na którym będzie można kupić/wyporzyczyć:
+serwis internetowy, na którym będzie można kupić/wyporzyczyć:
 1)Books, 2)BoardGames, 3)VideoGames
-nazwa serwisu?:
-(polska czy angielska)
+nazwa serwisu?:(polska czy angielska)
 onlineStore? amazin?
 
 -------
--- BACK END:
+### BACK END:
 --------
 controller:
 -web service controller=>spring boot
 model:
--klasa abstrakcyjna Product 
--klasy rozszerzające Product: Book, BoardGame, VideoGame 
+-klasa AbstractProduct 
+-klasy rozszerzające: Book, BoardGame, VideoGame 
 dao:
-postgreSQL+Hibernate
+a)ListRepository
+b)PostgreSQLJDBC
+c)Hibernate JPA
+
 service:
 -upload file/download file?=>spring framework
 pdf z ksiazka, jar/zip z grą, jpg z okladka
@@ -26,7 +28,7 @@ view:
 -thymeleaf=>mapowanie obiektów java do html
 
 --------
---FRONT END i STRUNKTURA STRONY:
+### FRONT END i STRUNKTURA STRONY:
 --------
 top menu div strony(od lewej):
 -klikalne logo(przenoszące do sterony glownej)
@@ -46,21 +48,22 @@ kolorystyka:
 -granice pomiędzy divami w odcieniach szarości
 
 strony na których mozemy sie wzorować:
--spolecznosciówki
-https://www.facebook.com/
-https://www.linkedin.com/
-https://github.com/
-https://www.filmweb.pl/
-https://www.youtube.com/
--sklepy
-https://allegro.pl/
-https://www.x-kom.pl/
-https://www.morele.net/
-https://www.amazon.com/
-https://www.empik.com/
+#-spolecznosciówki
+- [https://www.facebook.com/](https://www.facebook.com/)
+- [https://www.linkedin.com/](https://www.linkedin.com/)
+- [https://github.com/](https://github.com/)
+- [https://www.filmweb.pl/](https://www.filmweb.pl/)
+- [https://www.youtube.com/](https://www.youtube.com/)
+#-sklepy
+- [https://allegro.pl/](https://allegro.pl/)
+- [https://www.x-kom.pl/](https://www.x-kom.pl/)
+- [https://www.morele.net/](https://www.morele.net/)
+- [https://www.amazon.com/](https://www.amazon.com/)
+- [https://www.empik.com/](https://www.empik.com/)
+
 
 --------
-W PRZYSZLOŚCI:
+### W PRZYSZLOŚCI:
 --------
 -klasa Users tabela users => postgres+hibernate_spring auth
 -klasa Comments => mongoDB+hibernate
