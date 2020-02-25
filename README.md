@@ -51,6 +51,7 @@ kolorystyka:
 -granice pomiędzy divami w odcieniach szarości
 
 strony na których mozemy sie wzorować:
+```
 #-spolecznosciówki
 - [https://www.facebook.com/](https://www.facebook.com/)
 - [https://www.linkedin.com/](https://www.linkedin.com/)
@@ -63,7 +64,7 @@ strony na których mozemy sie wzorować:
 - [https://www.morele.net/](https://www.morele.net/)
 - [https://www.amazon.com/](https://www.amazon.com/)
 - [https://www.empik.com/](https://www.empik.com/)
-```
+
 
 --------
 ### W PRZYSZLOŚCI:
