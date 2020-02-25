@@ -1,14 +1,16 @@
 -------
 ### ABOUT:
 --------
+```
 serwis internetowy, na którym będzie można kupić/wyporzyczyć:
 1)Books, 2)BoardGames, 3)VideoGames
 nazwa serwisu?:(polska czy angielska)
 onlineStore? amazin?
-
+```
 -------
 ### BACK END:
 --------
+```
 controller:
 -web service controller=>spring boot
 model:
@@ -26,10 +28,11 @@ view:
 -index.html , shop.html , aboutUs.html/contactUs.html , myAccount.html
 -style.css
 -thymeleaf=>mapowanie obiektów java do html
-
+```
 --------
 ### FRONT END i STRUNKTURA STRONY:
 --------
+```
 top menu div strony(od lewej):
 -klikalne logo(przenoszące do sterony glownej)
 -pasek wyszukiwania
@@ -60,11 +63,12 @@ strony na których mozemy sie wzorować:
 - [https://www.morele.net/](https://www.morele.net/)
 - [https://www.amazon.com/](https://www.amazon.com/)
 - [https://www.empik.com/](https://www.empik.com/)
-
+```
 
 --------
 ### W PRZYSZLOŚCI:
 --------
+```
 -klasa Users tabela users => postgres+hibernate_spring auth
 -klasa Comments => mongoDB+hibernate
 -wyskakujace okienko formularza logowania
@@ -77,3 +81,4 @@ opcjonalna aplikacja konsolowa/swing/javafx odwolujaca sie do serwisu:
 symulowanie ruchu na stronie, zamowień i dostaw produktow?
 po zakupie zadowolny klient mógłby ocenić produkt i zostawiać komentarz? 
 :)
+```
