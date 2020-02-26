@@ -41,7 +41,7 @@ public class HibernateUtilsSF {
             properties.put(Environment.DRIVER, "org.postgresql.Driver");
             properties.put(Environment.URL, "jdbc:postgresql://localhost:5432/onlineStore"); //"hibernate.connection.url"
             properties.put(Environment.USER, "postgres");
-            properties.put(Environment.PASS, "academik1718");
+            properties.put(Environment.PASS, "postgres1");
             properties.put(Environment.FORMAT_SQL, "true");
             properties.put(Environment.SHOW_SQL, "true");
             properties.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
