@@ -1,5 +1,6 @@
 body {
     background-color: lightcyan;
+    /*background-color: red;*/
 }
 .container-fluid{
     /*background-color: yellow;*/
@@ -8,6 +9,15 @@ body {
 .login{
     float: left;
 }
+nav {
+    position: fixed;
+    top: 0;
+    background: #fff;
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+}
+
 /*.leftContainer{*/
 /* background-color: red;*/
 /*}*/

@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.example</groupId>
-    <artifactId>library_spring_hibernate_auth</artifactId>
+    <artifactId>online-store_spring</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>_online-store_spring-hiber-auth-jersey</name>
@@ -23,7 +23,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!-- VERSIONS -->
-        <spring-framework-boot.version>2.2.2.RELEASE</spring-framework-boot.version>
+        <spring-framework-boot.version>2.2.4.RELEASE</spring-framework-boot.version>
         <spring-framework.version>5.2.2.RELEASE</spring-framework.version>
         <hibernate.version>5.4.10.Final</hibernate.version>
         <postgresql.version>42.2.10</postgresql.version>
@@ -67,18 +67,18 @@
             </exclusions>
         </dependency>
         <!-- Logging with LogBack & SLF4J -->
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-            <scope>compile</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>ch.qos.logback</groupId>-->
+<!--            <artifactId>logback-classic</artifactId>-->
+<!--            <version>${logback.version}</version>-->
+<!--            <scope>runtime</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.slf4j</groupId>-->
+<!--            <artifactId>slf4j-api</artifactId>-->
+<!--            <version>${slf4j.version}</version>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
         <!-- Hibernate -->
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -106,6 +106,13 @@
             <groupId>commons-dbcp</groupId>
             <artifactId>commons-dbcp</artifactId>
             <version>1.4</version>
+        </dependency>
+        <!-- JUnit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

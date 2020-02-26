@@ -53,26 +53,26 @@ public class OnlineStoreController {
         return "index";
     }
     /** ONLINE-STORE PAGE MAPPINGS */
-    @GetMapping(value = "/onlineStore")
+    @GetMapping(value = "/gallery")
     public String getAllBooks(Model model) {
         model.addAttribute("books", bookDao.getAllProductsFromDB());
         model.addAttribute("boardGames", boardGameDao.getAllProductsFromDB());
         model.addAttribute("videoGames", videoGameDao.getAllProductsFromDB());
-        return "online-store";
+        return "gallery";
     }
     /** ADD-PRODUCT PAGE MAPPINGS */
-    @GetMapping(value = "/addProduct")
+    @GetMapping(value = "/crud")
     public String getAddBooks(Model model) {
         model.addAttribute("book", new Book());
         model.addAttribute("boardGames", new BoardGame());
         model.addAttribute("videoGames", new VideoGame());
-        return "add-product";
+        return "crud";
     }
-    @PostMapping(value = "/addProduct")
+    @PostMapping(value = "/crud")
     public String postSaveBook(@ModelAttribute AbstractProduct abstractProduct) {
 
         bookDao.addProduct((Book) abstractProduct);
-        return "redirect:/onlineStore";
+        return "redirect:/gallery";
     }
     /** ABOUT-US PAGE MAPPINGS */
     @GetMapping(value = "/aboutUs")

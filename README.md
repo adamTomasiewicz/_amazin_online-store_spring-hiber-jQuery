@@ -56,9 +56,27 @@ strony na których mozemy sie wzorować:
 - [https://www.amazon.com/](https://www.amazon.com/)
 - [https://www.empik.com/](https://www.empik.com/)
 
---------
-### POMYSLY:
---------
+-------------
+### TASKI BIEŻĄCE:
+-------------
+```
+1) galeria produktów
+2) css, ujednolicenie kolorystyki strony
+3) klikalne logo
+4) uporządkowanie  mapowań w klasie  OnlineStoreController
+ @ResponseBody, @ResponseStatus, @Path, @PathVariable, @RequestBody
+5)  i pospinanie tego z odpowiednimi stronami,
+
+-dodanie kilku obrazków i zrobienie galerii
+-napisanie tej funkcjonalności ładowania plików
+6) upload/download file
+7) testy: 
+-CRUD dla produktów
+
+```
+--------------
+### TASKI NA GWIAZDKI:
+--------------
 ```
 -koszyk produktow
 -zaloguj/moje konto
