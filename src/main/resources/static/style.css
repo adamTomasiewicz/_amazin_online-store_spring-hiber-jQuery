@@ -17,48 +17,10 @@ nav {
     z-index: 2;
     width: 100%;
 }
-
-.font-weight-light  {
-    text-align: center;
-    font-weight: bold;
+.product{
+    background: #fff;
+    margin: 5px;
 }
-
-.aboutUs {
-    padding: 20px;
-}
-.aboutUs li {
-    padding: 10px;
-}
-
-.whyWe {
-    margin-top: 1.5rem;
-}
-
-.up {
-    width: 1330px;
-    height: 135px;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRH1HOGCJkTaEVmtDpsHQL-eYZ70qsDkrQIwdbK4JKo-Mpow5OM");
-    align-content: center;
-}
-.upText {
-    text-align: center;
-    font-weight: bold;
-    font-size: 50px;
-}
-
-.imgClients {
-    width: 140px;
-    height: 180px;
-}
-
-.imgBestsellers {
-    width: 250px;
-    height: 320px;
-}
-
-
-
-
 /*.leftContainer{*/
 /* background-color: red;*/
 /*}*/
