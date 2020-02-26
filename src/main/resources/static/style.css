@@ -17,7 +17,10 @@ nav {
     z-index: 2;
     width: 100%;
 }
-
+.product{
+    background: #fff;
+    margin: 5px;
+}
 /*.leftContainer{*/
 /* background-color: red;*/
 /*}*/

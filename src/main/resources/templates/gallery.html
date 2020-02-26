@@ -77,161 +77,76 @@
 
 <div class="container">
     <div class="row product-grid">
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product">
-            <h3>Produkt</h3>
-
+    <!--/*@thymesVar id="books" type="java"*/-->
+<!--    <tr th:each="book: ${books}">-->
+<!--        &lt;!&ndash;/*@thymesVar id="id" type="java"*/&ndash;&gt;-->
+<!--        &lt;!&ndash;/*@thymesVar id="id" type="java"*/&ndash;&gt;-->
+<!--        &lt;!&ndash;/*@thymesVar id="IDBook" type="java"*/&ndash;&gt;-->
+<!--        <td th:text="${book.idProduct}"/>-->
+<!--        <td th:text="${book.title}"/>-->
+<!--        <td th:text="${book.author}"/>-->
+<!--        <td th:text="${book.aboutText}"/>-->
+<!--    </tr>-->
+        <article th:each="book: ${books}" class="col-12 col-sm-6 col-md-4 col-xl-3 product">
+            <label th:text="${book.idProduct}"></label><h6 th:text="${book.title}" ></h6>
             <figure>
-                <img src="/images/images-games-the-witcher-wallpaper-preview.jpg" class="img-fluid">
+                <img src="https://c4.wallpaperflare.com/wallpaper/167/524/934/images-games-the-witcher-wallpaper-preview.jpg" class="img-fluid">
             </figure>
-
+            <h6 th:text="${book.author}"></h6>
             <button class="btn btn-primary">
                 Dodaj do koszyka
                 <i class="fa fa-shopping-cart"></i>
             </button>
         </article>
 
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product">
-            <h3>Produkt</h3>
+        <!--    </tr>-->
+        <!--    <tr th:each="boardGame: ${boardGames}">-->
+        <!--        &lt;!&ndash;/*@thymesVar id="id" type="java"*/&ndash;&gt;-->
+        <!--        &lt;!&ndash;/*@thymesVar id="id" type="java"*/&ndash;&gt;-->
+        <!--        &lt;!&ndash;/*@thymesVar id="IDBook" type="java"*/&ndash;&gt;-->
+        <!--        <td th:text="${boardGame.idProduct}"/>-->
+        <!--        <td th:text="${boardGame.title}"/>-->
+        <!--        <td th:text="${boardGame.author}"/>-->
+        <!--        <td th:text="${boardGame.aboutText}"/>-->
+        <!--    </tr>-->
 
+        <article th:each="boardGame: ${boardGames}" class="col-12 col-sm-6 col-md-4 col-xl-3 product">
+            <label th:text="${boardGame.idProduct}"></label><h6 th:text="${boardGame.title}" ></h6>
             <figure>
-                <img src="/images/images-games-the-witcher-wallpaper-preview.jpg" class="img-fluid">
+                <img src="https://c4.wallpaperflare.com/wallpaper/167/524/934/images-games-the-witcher-wallpaper-preview.jpg" class="img-fluid">
             </figure>
-
+            <h6 th:text="${boardGame.author}"></h6>
             <button class="btn btn-primary">
                 Dodaj do koszyka
+                <i class="fa fa-shopping-cart"></i>
+            </button>
+        </article>
+
+        <!--    </tr>-->
+        <!--    <tr th:each="videoGame: ${videoGames}">-->
+        <!--        &lt;!&ndash;/*@thymesVar id="id" type="java"*/&ndash;&gt;-->
+        <!--        &lt;!&ndash;/*@thymesVar id="id" type="java"*/&ndash;&gt;-->
+        <!--        &lt;!&ndash;/*@thymesVar id="IDBook" type="java"*/&ndash;&gt;-->
+        <!--        <td th:text="${videoGame.idProduct}"/>-->
+        <!--        <td th:text="${videoGame.title}"/>-->
+        <!--        <td th:text="${videoGame.author}"/>-->
+        <!--        <td th:text="${videoGame.aboutText}"/>-->
+        <!--    </tr>-->
+
+        <article th:each="videoGame: ${videoGames}" class="col-12 col-sm-6 col-md-4 col-xl-3 product">
+            <label th:text="${videoGame.idProduct}"></label><h6 th:text="${videoGame.title}" ></h6>
+            <figure>
+                <img src="https://c4.wallpaperflare.com/wallpaper/167/524/934/images-games-the-witcher-wallpaper-preview.jpg" class="img-fluid">
+            </figure>
+            <h6 th:text="${videoGame.author}"></h6>
+            <button class="btn btn-primary">
+                Dodaj do koszyka
+                <i class="fa fa-shopping-cart"></i>
             </button>
         </article>
 
 
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product">
-            <h3>Produkt</h3>
-
-            <figure>
-                <img src="/images/images-games-the-witcher-wallpaper-preview.jpg" class="img-fluid">
-            </figure>
-
-            <button class="btn btn-primary">
-                Dodaj do koszyka
-            </button>
-        </article>
-
-
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product">
-            <h3>Produkt</h3>
-
-            <figure>
-                <img src="/images/images-games-the-witcher-wallpaper-preview.jpg" class="img-fluid">
-            </figure>
-
-            <button class="btn btn-primary">
-                Dodaj do koszyka
-            </button>
-        </article>
-
-
-
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product">
-            <h3>Produkt</h3>
-
-            <figure>
-                <img src="/images/images-games-the-witcher-wallpaper-preview.jpg" class="img-fluid">
-            </figure>
-
-            <button class="btn btn-primary">
-                Dodaj do koszyka
-            </button>
-        </article>
-
-
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product">
-            <h3>Produkt</h3>
-
-            <figure>
-                <img src="/images/images-games-the-witcher-wallpaper-preview.jpg" class="img-fluid">
-            </figure>
-
-            <button class="btn btn-primary">
-                Dodaj do koszyka
-            </button>
-        </article>
-
-
-
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product">
-            <h3>Produkt</h3>
-
-            <figure>
-                <img src="/images/images-games-the-witcher-wallpaper-preview.jpg" class="img-fluid">
-            </figure>
-
-            <button class="btn btn-primary">
-                Dodaj do koszyka
-            </button>
-        </article>
-
-
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product">
-            <h3>Produkt</h3>
-
-            <figure>
-                <img src="/images/images-games-the-witcher-wallpaper-preview.jpg" class="img-fluid">
-            </figure>
-
-            <button class="btn btn-primary">
-                Dodaj do koszyka
-            </button>
-        </article>
-
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product">
-            <h3>Produkt</h3>
-
-            <figure>
-                <img src="/images/images-games-the-witcher-wallpaper-preview.jpg" class="img-fluid">
-            </figure>
-
-            <button class="btn btn-primary">
-                Dodaj do koszyka
-            </button>
-        </article>
-
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product">
-            <h3>Produkt</h3>
-
-            <figure>
-                <img src="/images/images-games-the-witcher-wallpaper-preview.jpg" class="img-fluid">
-            </figure>
-
-            <button class="btn btn-primary">
-                Dodaj do koszyka
-            </button>
-        </article>
-
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product">
-            <h3>Produkt</h3>
-
-            <figure>
-                <img src="/images/images-games-the-witcher-wallpaper-preview.jpg" class="img-fluid">
-            </figure>
-
-            <button class="btn btn-primary">
-                Dodaj do koszyka
-            </button>
-        </article>
-
-
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product">
-            <h3>Produkt</h3>
-
-            <figure>
-                <img src="/images/images-games-the-witcher-wallpaper-preview.jpg" class="img-fluid">
-            </figure>
-
-            <button class="btn btn-primary">
-                Dodaj do koszyka
-            </button>
-        </article>
-
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product">
+        <article class="col-12 col-sm-6 col-md-4 col-xl-3 product">
             <h3>Produkt</h3>
 
             <figure>
@@ -287,51 +202,8 @@
 <!--</fieldset>-->
 
 
-<!--FICZERY!!!!!!!!!!!!!!-->
-<!--FICZERY!!!!!!!!!!!!!!-->
-<!--FICZERY!!!!!!!!!!!!!!-->
-<!--FICZERY!!!!!!!!!!!!!!-->
-<!-- formularz-->
-<!-- klikalne labelki przenoszace focus -->
-<p>
-    <label for="name">
-        <span>Name: </span>
-        <strong><abbr title="required"></abbr>
-        </strong>
-    </label>
-    <input type="text" id="name" name="username">
-</p>
-<!--action="adres gdzie ma byc wyslany formularz"-->
-<!--method="GET/POST GET - widoczny w url, POST - widozny w nagłuwkach żadania-->
-<form action="" method="POST" novalidate autocomplete="off"></form>
-<!--Breadcrumb - rozwija sciezke pozwala na przejscie w zagniezdzeniu wstecz-->
-<!-- koncepcje CRUDa:-->
-<!-- a) mapowanie linkow w thymeleaf
-product/book [GET] - pobranie listy
-product/book [POST] - dodanie elementu
-product/book/1 [GET] - pobranie informacji o elemencie
-product/book/1 [PUT] - aktualizacja elementu
-product/book/1 [DELETE] - usuniecie elementu
--->
-<!-- b) ajax i autoodswiezajaca sie tabela z formlarzem add i przyciskami update, delete  -->
-<!--<table>-->
-<!--    &lt;!&ndash;/*@thymesVar id="books" type="java"*/&ndash;&gt;-->
-<!--    <tr th:each="abstractProduct: ${abstractProducts}">-->
-<!--        &lt;!&ndash;/*@thymesVar id="id" type="java"*/&ndash;&gt;-->
-<!--        &lt;!&ndash;/*@thymesVar id="id" type="java"*/&ndash;&gt;-->
-<!--        &lt;!&ndash;/*@thymesVar id="IDBook" type="java"*/&ndash;&gt;-->
-<!--        <td th:text="${abstractProduct.idproduct}"/>-->
-<!--        <td th:text="${abstractProduct.title}"/>-->
-<!--        <td th:text="${abstractProduct.author}"/>-->
-<!--    </tr>-->
-<!--</table>-->
-<!-- FILE INPUT -->
 
-<div class="file-input">
-    moj file input
-    <i class="fa fa-file"></i>
-    <input type="file">
-</div>
+
 <!--monit-->
 <div class="modal fade" id="promo-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
@@ -344,7 +216,7 @@ product/book/1 [DELETE] - usuniecie elementu
                 </button>
             </div>
             <div class="modal-body">
-                Twój kod promocyjny: 'A575' na 5% rabatu
+                Produkt dodany do koszyka!
             </div>
         </div>
     </div>
