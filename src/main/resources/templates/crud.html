@@ -70,8 +70,185 @@
         </div>
     </div>
 </nav>
+<!--book table-->
 
+</tr>
 
+<div>
+<table class="table table-hover table-bordered">
+    <thead>
+<!--    nazwy kolumn refleksja!!!-->
+    <tr >
+        <th scope="col">id</th>
+        <th scope="col">title</th>
+        <th scope="col">author</th>
+        <th scope="col">text</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="book: ${books}">
+        <th scope="row">1</th>
+        <td th:text="${book.title}"/>
+        <td th:text="${book.author}"/>
+        <td th:text="${book.aboutText}"/>
+    </tr>
+
+    </tbody>
+</table>
+</div>
+<!--book formular-->
+<div>
+<form action="" method="POST" novalidate autocomplete="off">
+    <label for="book.idProduct">
+        <span>Name: </span>
+        <strong><abbr title="required"></abbr>
+        </strong>
+    </label><input type="text" id="book.idProduct" name="book.idProduct">
+
+    <label for="book.title">
+        <span>Name: </span>
+        <strong><abbr title="required"></abbr>
+        </strong>
+    </label> <input type="text" id="book.title" name="book.title">
+    <label for="book.author">
+        <span>Name: </span>
+        <strong><abbr title="required"></abbr>
+        </strong>
+    </label><input type="text" id="book.author" name="book.author">
+    <label for="book.text">
+        <span>Name: </span>
+        <strong><abbr title="required"></abbr>
+        </strong>
+    </label> <input type="text" id="book.text" name="book.text">
+</form>
+</div>
+<!--boardGame table-->
+<div>
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr >
+            <th scope="col">id</th>
+            <th scope="col">title</th>
+            <th scope="col">author</th>
+            <th scope="col">text</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="book: ${books}">
+            <th scope="row">1</th>
+            <td th:text="${book.title}"/>
+            <td th:text="${book.author}"/>
+            <td th:text="${book.aboutText}"/>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!--boardGame form-->
+<div>
+    <form action="" method="POST" novalidate autocomplete="off">
+        <label for="boardGame.idProduct">
+            <span>Name: </span>
+            <strong><abbr title="required"></abbr>
+            </strong>
+        </label><input type="text" id="boardGame.idProduct" name="boardGame.idProduct">
+
+        <label for="boardGame.title">
+            <span>Name: </span>
+            <strong><abbr title="required"></abbr>
+            </strong>
+        </label> <input type="text" id="boardGame.title" name="boardGame.title">
+        <label for="boardGame.author">
+            <span>Name: </span>
+            <strong><abbr title="required"></abbr>
+            </strong>
+        </label><input type="text" id="boardGame.author" name="boardGame.author">
+        <label for="boardGame.text">
+            <span>Name: </span>
+            <strong><abbr title="required"></abbr>
+            </strong>
+        </label> <input type="text" id="boardGame.text" name="boardGame.text">
+    </form>
+</div>
+
+<!--boardGame table-->
+<div>
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr >
+            <th scope="col">id</th>
+            <th scope="col">title</th>
+            <th scope="col">author</th>
+            <th scope="col">text</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="book: ${books}">
+            <th scope="row">1</th>
+            <td th:text="${book.title}"/>
+            <td th:text="${book.author}"/>
+            <td th:text="${book.aboutText}"/>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!--boardGame form-->
+<div>
+    <form action="" method="POST" novalidate autocomplete="off">
+        <label for="videoGame.idProduct">
+            <span>Name: </span>
+            <strong><abbr title="required"></abbr>
+            </strong>
+        </label><input type="text" id="videoGame.idProduct" name="videoGame.idProduct">
+
+        <label for="videoGame.title">
+            <span>Name: </span>
+            <strong><abbr title="required"></abbr>
+            </strong>
+        </label> <input type="text" id="videoGame.title" name="videoGame.title">
+        <label for="videoGame.author">
+            <span>Name: </span>
+            <strong><abbr title="required"></abbr>
+            </strong>
+        </label><input type="text" id="videoGame.author" name="videoGame.author">
+        <label for="videoGame.text">
+            <span>Name: </span>
+            <strong><abbr title="required"></abbr>
+            </strong>
+        </label> <input type="text" id="videoGame.text" name="videoGame.text">
+    </form>
+
+</div>
+<!--FICZERY!!!!!!!!!!!!!!-->
+<!--FICZERY!!!!!!!!!!!!!!-->
+<!--FICZERY!!!!!!!!!!!!!!-->
+<!--FICZERY!!!!!!!!!!!!!!-->
+<!-- formularz-->
+<!-- klikalne labelki przenoszace focus -->
+
+<!--action="adres gdzie ma byc wyslany formularz"-->
+<!--method="GET/POST GET - widoczny w url, POST - widozny w nagłuwkach żadania-->
+
+<!--Breadcrumb - rozwija sciezke pozwala na przejscie w zagniezdzeniu wstecz-->
+<!-- koncepcje CRUDa:-->
+<!-- a) mapowanie linkow w thymeleaf
+product/book [GET] - pobranie listy
+product/book [POST] - dodanie elementu
+product/book/1 [GET] - pobranie informacji o elemencie
+product/book/1 [PUT] - aktualizacja elementu
+product/book/1 [DELETE] - usuniecie elementu
+-->
+<!-- b) ajax i autoodswiezajaca sie tabela z formlarzem add i przyciskami update, delete  -->
+<!--<table>-->
+<!--    &lt;!&ndash;/*@thymesVar id="books" type="java"*/&ndash;&gt;-->
+<!--    <tr th:each="abstractProduct: ${abstractProducts}">-->
+<!--        &lt;!&ndash;/*@thymesVar id="id" type="java"*/&ndash;&gt;-->
+<!--        &lt;!&ndash;/*@thymesVar id="id" type="java"*/&ndash;&gt;-->
+<!--        &lt;!&ndash;/*@thymesVar id="IDBook" type="java"*/&ndash;&gt;-->
+<!--        <td th:text="${abstractProduct.idproduct}"/>-->
+<!--        <td th:text="${abstractProduct.title}"/>-->
+<!--        <td th:text="${abstractProduct.author}"/>-->
+<!--    </tr>-->
+<!--</table>-->
 
 
 
