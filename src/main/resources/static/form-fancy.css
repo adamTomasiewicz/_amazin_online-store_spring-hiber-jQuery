@@ -1,0 +1,47 @@
+* {
+    font-family: 'Muli', sans-serif;
+}
+label {
+    cursor: pointer;
+}
+.fancy-button {
+    border: 2px solid transparent;
+    background: #6666ff;
+    color: #fff;
+    border-radius: 7px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    min-width: 60px;
+    min-height: 25px;
+    display: inline-flex;
+    justify-content: top;
+    align-items: center;
+    transition: all 1s;
+    padding: 7px 14px;
+}
+
+.fancy-button:hover {
+    border-color: darkred;
+    background: #fff;
+    color: darkred;
+}
+
+.fancy-button .text {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.fancy-button .icon {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 0 10px;
+}
+
+.fancy-button .icon .fa {
+    font-size: inherit;
+}
+
+
+
+

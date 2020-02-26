@@ -21,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- nasz css -->
     <link rel="stylesheet" media="screen" href="style.css"/>
-    <link rel="stylesheet" media="screen" href="button-fancy.css"/>
+    <link rel="stylesheet" media="screen" href="form-fancy.css"/>
 <!--    <link rel="stylesheet" media="print" href="diff-style.css">-->
     <!-- responsywny css -->
     <!-- <link rel="stylesheet" media="screen and (min-width: 415px) and (max-width: 1023px)" href="tablet.css">
@@ -76,22 +76,23 @@
 </tr>
 
 <div>
-<table class="table table-hover table-bordered">
+<table class="table table-hover table-bordered table-fixed">
     <thead>
 <!--    nazwy kolumn refleksja!!!-->
     <tr >
         <th scope="col">id</th>
         <th scope="col">title</th>
         <th scope="col">author</th>
-        <th scope="col">text</th>
+<!--        <th scope="col">text</th>-->
     </tr>
     </thead>
     <tbody>
     <tr th:each="book: ${books}">
-        <th scope="row">1</th>
+        <th scope="row" th:text="${book.idProduct}"/></th>
         <td th:text="${book.title}"/>
         <td th:text="${book.author}"/>
-        <td th:text="${book.aboutText}"/>
+<!--        <td th:text="${book.aboutText}"/>-->
+
     </tr>
 
     </tbody>
@@ -100,6 +101,7 @@
 <!--book formular-->
 <div>
 <form action="/crud" method="POST" novalidate autocomplete="off">
+<div>
     <label for="book.idProduct">
         <span>book.IDProduct: </span>
         <strong><abbr title="required"></abbr>
@@ -116,12 +118,14 @@
         <strong><abbr title="required"></abbr>
         </strong>
     </label><input type="text" id="book.author" name="book.author">
-    <label for="book.text">
-        <span>book.Text: </span>
-        <strong><abbr title="required"></abbr>
-        </strong>
-    </label> <input type="text" id="book.text" name="book.text">
+<!--    <label for="book.text">-->
+<!--        <span>book.Text: </span>-->
+<!--        <strong><abbr title="required"></abbr>-->
+<!--        </strong>-->
+<!--    </label> <input type="text" id="book.text" name="book.text">-->
+</div>
 
+<div>
     <button type="submit" class="fancy-button">
         <span class="text">
             CREATE
@@ -148,32 +152,35 @@
                 <i class="fa fa-bath"></i>
             </span>
     </button>
+</div>
 </form>
 </div>
 <!--boardGame table-->
 <div>
-    <table class="table table-hover table-bordered">
+    <table class="table table-hover table-bordered table-fixed">
         <thead>
         <tr >
             <th scope="col">id</th>
             <th scope="col">title</th>
             <th scope="col">author</th>
-            <th scope="col">text</th>
+<!--            <th scope="col">text</th>-->
         </tr>
         </thead>
         <tbody>
         <tr th:each="boardGame: ${boardGames}">
-            <th scope="row">1</th>
+            <th scope="row" th:text="${boardGame.idProduct}"/></th>
             <td th:text="${boardGame.title}"/>
             <td th:text="${boardGame.author}"/>
-            <td th:text="${boardGame.aboutText}"/>
+<!--            <td th:text="${boardGame.aboutText}"/>-->
         </tr>
         </tbody>
     </table>
 </div>
 <!--boardGame form-->
 <div>
+
     <form action="/crud" method="POST" novalidate autocomplete="off">
+        <div>
         <label for="boardGame.idProduct">
             <span>boardGame.IDProduct: </span>
             <strong><abbr title="required"></abbr>
@@ -190,12 +197,13 @@
             <strong><abbr title="required"></abbr>
             </strong>
         </label><input type="text" id="boardGame.author" name="boardGame.author">
-        <label for="boardGame.text">
-            <span>boardGame.Text: </span>
-            <strong><abbr title="required"></abbr>
-            </strong>
-        </label> <input type="text" id="boardGame.text" name="boardGame.text">
-
+<!--        <label for="boardGame.text">-->
+<!--            <span>boardGame.Text: </span>-->
+<!--            <strong><abbr title="required"></abbr>-->
+<!--            </strong>-->
+<!--        </label> <input type="text" id="boardGame.text" name="boardGame.text">-->
+        </div>
+<div>
         <button type="submit" class="fancy-button">
         <span class="text">
             CREATE
@@ -222,26 +230,27 @@
                 <i class="fa fa-bath"></i>
             </span>
         </button>
+</div>
     </form>
 </div>
 
 <!--videoGame table-->
 <div>
-    <table class="table table-hover table-bordered">
+    <table class="table table-hover table-bordered table-fixed">
         <thead>
         <tr >
             <th scope="col">id</th>
             <th scope="col">title</th>
             <th scope="col">author</th>
-            <th scope="col">text</th>
+<!--            <th scope="col">text</th>-->
         </tr>
         </thead>
         <tbody>
-        <tr th:each="videoGames: ${videoGames}">
-            <th scope="row">1</th>
-            <td th:text="${videoGames.title}"/>
-            <td th:text="${videoGames.author}"/>
-            <td th:text="${videoGames.aboutText}"/>
+        <tr th:each="videoGame: ${videoGames}">
+            <th scope="row" th:text="${videoGame.idProduct}"/></th>
+            <td th:text="${videoGame.title}"/>
+            <td th:text="${videoGame.author}"/>
+<!--            <td th:text="${videoGame.aboutText}"/>-->
         </tr>
         </tbody>
     </table>
@@ -249,6 +258,8 @@
 <!--videoGames form-->
 <div>
     <form action="" method="POST" novalidate autocomplete="off">
+
+<div>
         <label for="videoGame.idProduct">
             <span>videoGame.IDProduct: </span>
             <strong><abbr title="required"></abbr>
@@ -265,11 +276,13 @@
             <strong><abbr title="required"></abbr>
             </strong>
         </label><input type="text" id="videoGame.author" name="videoGame.author">
-        <label for="videoGame.text">
-            <span>videoGame.Text: </span>
-            <strong><abbr title="required"></abbr>
-            </strong>
-        </label> <input type="text" id="videoGame.text" name="videoGame.text">
+<!--        <label for="videoGame.text">-->
+<!--            <span>videoGame.Text: </span>-->
+<!--            <strong><abbr title="required"></abbr>-->
+<!--            </strong>-->
+<!--        </label> <input type="text" id="videoGame.text" name="videoGame.text">-->
+</div>
+        <div>
         <button type="submit" class="fancy-button">
         <span class="text">
             CREATE
@@ -296,6 +309,8 @@
                 <i class="fa fa-bath"></i>
             </span>
         </button>
+        </div>
+
     </form>
 
 </div>
