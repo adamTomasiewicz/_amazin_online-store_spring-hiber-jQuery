@@ -1,0 +1,106 @@
+* {
+    font-family: 'Muli', sans-serif;
+}
+
+.fancy-button {
+    border: 2px solid transparent;
+    background: red;
+    color: #fff;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    min-width: 100px;
+    min-height: 60px;
+    display: inline-flex;
+    justify-content: top;
+    align-items: center;
+    transition: all 1s;
+    padding: 10px 20px;
+}
+
+.fancy-button:hover {
+    border-color: darkred;
+    background: #fff;
+    color: darkred;
+}
+
+.fancy-button .text {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.fancy-button .icon {
+    display: block;
+    font-size: 30px;
+    margin: 0 0 0 10px;
+}
+
+.fancy-button .icon .fa {
+    font-size: inherit;
+}
+
+
+
+
+section > p {
+    color: pink;
+    background: darkblue;
+    transition: all 3s;
+}
+
+section > p:hover {
+    background: yellow;
+    font-weight: 700; /* 400 - normalna, 700 - pogrubiona /> */
+}
+
+
+section p {
+    font: 20px/50px serif;
+    letter-spacing: -.5px;
+}
+
+.fa-bath {
+    font-size: 200px;
+    color: plum;
+    transition: color .5s;
+}
+
+.fa-bath:hover {
+    color: purple;
+}
+
+.fa {
+    font-size: 300px;
+}
+
+.person {
+    font-size: 22px;
+    color: black;
+}
+
+.person.lady:before {
+    content: 'Pani ';
+    font-style: italic;
+}
+
+.person.man:before {
+    font-family: 'FontAwesome';
+    content: '\f2db ';
+}
+
+
+
+/* input {
+    width: 200px;
+    display: block;
+    margin: 10px 0;
+}
+
+input.wide {
+    width: 400px;
+} */
+
+label {
+    cursor: pointer;
+}
