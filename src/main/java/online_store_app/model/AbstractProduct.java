@@ -7,13 +7,13 @@ public abstract class AbstractProduct {
 
     /**atributes*/
 
-    protected int idProduct;
-    protected String title;
-    protected String author;
-    protected String aboutText;
-    protected double price;
-    // protected List<String> listOfTags;
-    protected String url;
+//    protected int idProduct;
+//    protected String title;
+//    protected String author;
+//    protected String aboutText;
+//    protected double price;
+//    // protected List<String> listOfTags;
+//    protected String url;
 
 
 
@@ -25,7 +25,7 @@ public abstract class AbstractProduct {
 //    public abstract List<AbstractProduct> getAllProductsFromDB();
 
     /**default methods*/
-    @Override
+/*    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -67,7 +67,7 @@ public abstract class AbstractProduct {
         return sb.toString();
     }
 
-    /**getters & setters*/
+    *//**getters & setters*//*
 
     public int getIdProduct() {
         return idProduct;
@@ -100,7 +100,7 @@ public abstract class AbstractProduct {
         this.price = price;
     }
 
-/*
+*//*
    public List<String> getListOfTags() {
         return listOfTags;
     }
@@ -108,7 +108,7 @@ public abstract class AbstractProduct {
    public void setListOfTags(List<String> listOfTags) {
         this.listOfTags = listOfTags;
     }
-*/
+*//*
 
     public String getUrl() {
         return url;
@@ -116,5 +116,5 @@ public abstract class AbstractProduct {
 
     public void setUrl(String url) {
         this.url = url;
-    }
+    }*/
 }

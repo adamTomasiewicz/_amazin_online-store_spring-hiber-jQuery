@@ -1,6 +1,5 @@
-package online_store_app.services;
+package online_store_app.dao;
 
-import online_store_app.dao.InterfaceDAO;
 import online_store_app.model.Book;
 import online_store_app.services.HibernateUtilsSF;
 import org.hibernate.Session;
@@ -9,15 +8,16 @@ import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
-@Qualifier("books")
+
 @Component
 public class BookDaoImpl implements InterfaceDAO<Book> {
-    @Autowired
-    protected HibernateUtilsSF hibernateUtilsSF;
+
+    protected static final HibernateUtilsSF hibernateUtilsSF=new HibernateUtilsSF();
+
+
 
     @Override
     public void addProduct(Book book) {
@@ -47,6 +47,7 @@ public class BookDaoImpl implements InterfaceDAO<Book> {
         tx.commit();
         session.close();
     }
+
 
     @Override
     public Optional<Book> getProductByID(Integer id){

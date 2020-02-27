@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Properties;
 
-@Component
+@Service
 public class HibernateUtilsSF {
     private final SessionFactory sessionFactory;
 
@@ -46,7 +46,7 @@ public class HibernateUtilsSF {
             properties.put(Environment.SHOW_SQL, "true");
             properties.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
             // properties.put(Environment.DIALECT, "PostgresSQL95Dialect");
-            properties.put(Environment.HBM2DDL_AUTO, "create"); //actions on tables: update / create / create-drop / none
+            properties.put(Environment.HBM2DDL_AUTO, "update"); //actions on tables: update / create / create-drop / none
             //add properties to configuration
             configuration = new Configuration();
             configuration.setProperties(properties);

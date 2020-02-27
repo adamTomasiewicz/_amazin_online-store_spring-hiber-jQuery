@@ -27,7 +27,8 @@
     <!-- <link rel="stylesheet" media="screen and (min-width: 415px) and (max-width: 1023px)" href="tablet.css">
     <link rel="stylesheet" media="screen and (min-width: 1024px)" href="desktop.css"> -->
     <!-- nasz js -->
-    <script defer src="main.js"></script>
+    <script defer src="script.js"></script>
+    <script defer src="crud.js"></script>
 
 </head>
 
@@ -71,9 +72,11 @@
         </div>
     </div>
 </nav>
-<!--book table-->
 
-</tr>
+
+<!--BOOK TABLE-->
+<!--BOOK TABLE-->
+<!--BOOK TABLE-->
 
 <div>
 <table class="table table-hover table-bordered table-fixed">
@@ -98,26 +101,28 @@
     </tbody>
 </table>
 </div>
-<!--book formular-->
-<div>
-<form action="/crud" method="POST" novalidate autocomplete="off">
-<div>
-    <label for="book.idProduct">
-        <span>book.IDProduct: </span>
-        <strong><abbr title="required"></abbr>
-        </strong>
-    </label><input type="text" id="book.idProduct" name="book.idProduct">
+<!--book form-->
+<!--book form-->
+<!--book form-->
 
-    <label for="book.title">
+<div>
+<form action="" method="" novalidate autocomplete="off">
+<div>
+    <label for="book_idProduct">
+        <span>book.IDProduct: </span>
+        <strong><abbr title="required"></abbr></strong>
+    </label><input type="text" id="book_idProduct" name="book_idProduct">
+
+    <label for="book_title">
         <span>book.Title: </span>
         <strong><abbr title="required"></abbr>
         </strong>
-    </label> <input type="text" id="book.title" name="book.title">
-    <label for="book.author">
+    </label> <input type="text" id="book_title" name="${book_title}">
+    <label for="book_author">
         <span>book.Author: </span>
         <strong><abbr title="required"></abbr>
         </strong>
-    </label><input type="text" id="book.author" name="book.author">
+    </label><input type="text" id="book_author" name="book_author">
 <!--    <label for="book.text">-->
 <!--        <span>book.Text: </span>-->
 <!--        <strong><abbr title="required"></abbr>-->
@@ -125,15 +130,22 @@
 <!--    </label> <input type="text" id="book.text" name="book.text">-->
 </div>
 
-<div>
-    <button type="submit" class="fancy-button">
-        <span class="text">
-            CREATE
+<script></script>
+
+<!--    <input type="button" class="fancy-button" formmethod="post" onclick="location.href='/products/create/1';" value="CREATE" />-->
+ <input type="button" class="fancy-button" onclick="jsonParserBook()" value="CREATE" />
+
+
+
+
+    <!--    <button type="submit" >&ndash;&gt;
+        <span class="text">CREATE
         </span>
         <span class="icon">
             <i class="fa fa-envelope"></i>
         </span>
-    </button>
+    </button>-->
+
 
     <button type="submit" class="fancy-button">
             <span class="text">

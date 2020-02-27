@@ -3,14 +3,10 @@ package online_store_app.controller;
 
 import online_store_app.auth.Users;
 
-import online_store_app.model.BoardGame;
-import online_store_app.services.BoardGameDaoImpl;
-import online_store_app.services.BookDaoImpl;
-import online_store_app.services.UsersDaoImpl;
-import online_store_app.model.AbstractProduct;
-import online_store_app.model.Book;
-import online_store_app.model.VideoGame;
-import online_store_app.services.VideoGameDaoImpl;
+import online_store_app.dao.BoardGameDaoImpl;
+import online_store_app.dao.BookDaoImpl;
+import online_store_app.dao.UsersDaoImpl;
+import online_store_app.dao.VideoGameDaoImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,4 +1,4 @@
-package online_store_app.services;
+package online_store_app.dao;
 
 import online_store_app.auth.Users;
 import online_store_app.dao.InterfaceDAO;
