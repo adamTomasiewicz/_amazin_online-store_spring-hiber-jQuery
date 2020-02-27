@@ -26,6 +26,7 @@ nav {
 .aboutUs {
     padding: 20px;
 }
+
 .aboutUs li {
     padding: 10px;
 }
@@ -40,6 +41,7 @@ nav {
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRH1HOGCJkTaEVmtDpsHQL-eYZ70qsDkrQIwdbK4JKo-Mpow5OM");
     align-content: center;
 }
+
 .upText {
     text-align: center;
     font-weight: bold;
