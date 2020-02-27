@@ -94,6 +94,7 @@
         <th scope="row" th:text="${book.idProduct}"/></th>
         <td th:text="${book.title}"/>
         <td th:text="${book.author}"/>
+        <td th:text="${book.urlImage}"/>
 <!--        <td th:text="${book.aboutText}"/>-->
 
     </tr>
@@ -123,6 +124,12 @@
         <strong><abbr title="required"></abbr>
         </strong>
     </label><input type="text" id="book_author" name="book_author">
+
+    <label for="book_urlImage">
+        <span>book.urlImage: </span>
+        <strong><abbr title="required"></abbr>
+        </strong>
+    </label><input type="text" id="book_urlImage" name="book_urlImage">
 <!--    <label for="book.text">-->
 <!--        <span>book.Text: </span>-->
 <!--        <strong><abbr title="required"></abbr>-->
@@ -132,39 +139,59 @@
 
 <script></script>
 
-<!--    <input type="button" class="fancy-button" formmethod="post" onclick="location.href='/products/create/1';" value="CREATE" />-->
- <input type="button" class="fancy-button" onclick="jsonParserBook()" value="CREATE" />
+    <div>
+        <input type="button" class="fancy-button" onclick="jsonParser_CreateBook()" value="CREATE" />
+        <input type="button" class="fancy-button" onclick="jsonParser_UpdateBook()" value="UPDATE"/>
+        <input type="button" class="fancy-button" onclick="jsonParser_DeleteBook()" value="DELETE"/>
+    </div>
 
+<!--        <button type="submit" class="fancy-button" onclick="jsonParser_CreateBook()">-->
+<!--        <span class="text">-->
+<!--            CREATE-->
+<!--        </span>-->
+<!--            <span class="icon">-->
+<!--            <i class="fa fa-envelope"></i>-->
+<!--        </span>-->
+<!--        </button>-->
 
+<!--        <button type="submit" class="fancy-button" onclick="jsonParser_UpdateBook()">-->
+<!--            <span class="text">-->
+<!--                UPDATE-->
+<!--            </span>-->
+<!--            <span class="icon">-->
+<!--                <i class="fa fa-bath"></i>-->
+<!--            </span>-->
+<!--        </button>-->
 
+<!--        <button type="submit" class="fancy-button" onclick="jsonParser_DeleteBook()">-->
+<!--            <span class="text">-->
+<!--                DELETE-->
+<!--            </span>-->
+<!--            <span class="icon">-->
+<!--                <i class="fa fa-bath"></i>-->
+<!--            </span>-->
+<!--        </button>-->
+<!--    <i class="fa fa-bath"></i>-->
 
-    <!--    <button type="submit" >&ndash;&gt;
-        <span class="text">CREATE
-        </span>
-        <span class="icon">
-            <i class="fa fa-envelope"></i>
-        </span>
-    </button>-->
+<!--    <button type="submit" class="fancy-button">-->
+<!--            <span class="text">-->
+<!--                UPDATE-->
+<!--            </span>-->
+<!--        <span class="icon">-->
+<!--                <i class="fa fa-bath"></i>-->
+<!--            </span>-->
+<!--    </button>-->
 
+<!--    <button type="submit" class="fancy-button">-->
+<!--            <span class="text">-->
+<!--                DELETE-->
+<!--            </span>-->
+<!--        <span class="icon">-->
+<!--                <i class="fa fa-bath"></i>-->
+<!--            </span>-->
+<!--    </button>-->
+<!--</div>-->
 
-    <button type="submit" class="fancy-button">
-            <span class="text">
-                UPDATE
-            </span>
-        <span class="icon">
-                <i class="fa fa-bath"></i>
-            </span>
-    </button>
-
-    <button type="submit" class="fancy-button">
-            <span class="text">
-                DELETE
-            </span>
-        <span class="icon">
-                <i class="fa fa-bath"></i>
-            </span>
-    </button>
-</div>
 </form>
 </div>
 <!--boardGame table-->
@@ -191,7 +218,7 @@
 <!--boardGame form-->
 <div>
 
-    <form action="/crud" method="POST" novalidate autocomplete="off">
+<!--    <form action="/crud" method="POST" novalidate autocomplete="off">-->
         <div>
         <label for="boardGame.idProduct">
             <span>boardGame.IDProduct: </span>
@@ -215,35 +242,12 @@
 <!--            </strong>-->
 <!--        </label> <input type="text" id="boardGame.text" name="boardGame.text">-->
         </div>
-<div>
-        <button type="submit" class="fancy-button">
-        <span class="text">
-            CREATE
-        </span>
-            <span class="icon">
-            <i class="fa fa-envelope"></i>
-        </span>
-        </button>
-
-        <button type="submit" class="fancy-button">
-            <span class="text">
-                UPDATE
-            </span>
-            <span class="icon">
-                <i class="fa fa-bath"></i>
-            </span>
-        </button>
-
-        <button type="submit" class="fancy-button">
-            <span class="text">
-                DELETE
-            </span>
-            <span class="icon">
-                <i class="fa fa-bath"></i>
-            </span>
-        </button>
-</div>
-    </form>
+        <div>
+            <input type="button" class="fancy-button" onclick="jsonParser_CreateBoardGame()" value="CREATE" />
+            <input type="button" class="fancy-button" onclick="jsonParser_UpdateBoardGame()" value="UPDATE"/>
+            <input type="button" class="fancy-button" onclick="jsonParser_DeleteBoardGame()" value="DELETE"/>
+        </div>
+<!--    </form>-->
 </div>
 
 <!--videoGame table-->
@@ -295,32 +299,9 @@
 <!--        </label> <input type="text" id="videoGame.text" name="videoGame.text">-->
 </div>
         <div>
-        <button type="submit" class="fancy-button">
-        <span class="text">
-            CREATE
-        </span>
-            <span class="icon">
-            <i class="fa fa-envelope"></i>
-        </span>
-        </button>
-
-        <button type="submit" class="fancy-button">
-            <span class="text">
-                UPDATE
-            </span>
-            <span class="icon">
-                <i class="fa fa-bath"></i>
-            </span>
-        </button>
-
-        <button type="submit" class="fancy-button">
-            <span class="text">
-                DELETE
-            </span>
-            <span class="icon">
-                <i class="fa fa-bath"></i>
-            </span>
-        </button>
+            <input type="button" class="fancy-button" onclick="jsonParser_CreateVideoGame()" value="CREATE" />
+            <input type="button" class="fancy-button" onclick="jsonParser_UpdateVideoGame()" value="UPDATE"/>
+            <input type="button" class="fancy-button" onclick="jsonParser_DeleteVideoGame()" value="DELETE"/>
         </div>
 
     </form>

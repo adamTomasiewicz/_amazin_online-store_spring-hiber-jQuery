@@ -35,6 +35,12 @@ public class BoardGame extends AbstractProduct {
         this.url = url;
     }
 
+    public BoardGame(int idProduct, String title, String author) {
+        this.idProduct = idProduct;
+        this.title = title;
+        this.author = author;
+    }
+
     public int getIdProduct() {
         return idProduct;
     }

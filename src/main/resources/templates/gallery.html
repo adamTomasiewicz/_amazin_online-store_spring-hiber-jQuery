@@ -90,7 +90,8 @@
         <article th:each="book: ${books}" class="col-12 col-sm-6 col-md-4 col-xl-3 product">
             <label th:text="${book.idProduct}"></label><h6 th:text="${book.title}" ></h6>
             <figure>
-                <img src="https://c4.wallpaperflare.com/wallpaper/167/524/934/images-games-the-witcher-wallpaper-preview.jpg" class="img-fluid">
+                <img th:text = "${book.urlImage}" class="img-fluid">
+<!--                <img src="https://c4.wallpaperflare.com/wallpaper/167/524/934/images-games-the-witcher-wallpaper-preview.jpg" class="img-fluid">-->
             </figure>
             <h6 th:text="${book.author}"></h6>
             <button class="btn btn-primary">

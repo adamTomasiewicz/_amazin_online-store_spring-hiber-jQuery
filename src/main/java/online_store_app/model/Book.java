@@ -17,6 +17,7 @@ public class Book extends AbstractProduct {
     protected double price;
     // protected List<String> listOfTags;
     protected String url;
+    protected String urlImage;
 
     public Book() {
     }
@@ -28,6 +29,17 @@ public class Book extends AbstractProduct {
         this.price = price;
         //this.listOfTags = listOfTags;
         this.url = url;
+    }
+
+    public Book(int idProduct, String title, String author, String aboutText, double price, List<String> listOfTags, String url, String urlImage) {
+        this.idProduct = idProduct;
+        this.title = title;
+        this.author = author;
+        this.aboutText = aboutText;
+        this.price = price;
+        //this.listOfTags = listOfTags;
+        this.url = url;
+        this.urlImage = urlImage;
     }
 
     public Book(int idProduct, String title, String author, String aboutText, double price) {
@@ -90,5 +102,11 @@ public class Book extends AbstractProduct {
         this.url = url;
     }
 
+    public String getUrlImage() {
+        return urlImage;
+    }
 
+    public void setUrlImage(String urlImage) {
+        this.urlImage = urlImage;
+    }
 }
