@@ -5,5 +5,6 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan("online_store_app.services")
+@ComponentScan("online_store_app.dao")
 public class AppConfiguration {
 }

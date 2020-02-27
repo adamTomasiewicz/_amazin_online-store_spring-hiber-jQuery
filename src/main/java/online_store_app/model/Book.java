@@ -9,7 +9,6 @@ import java.util.List;
 public class Book extends AbstractProduct {
     /**atributes*/
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected int idProduct;
    // @Column(name="title", nullable = false, length = 50, updatable = true)
     protected String title;
@@ -38,63 +37,55 @@ public class Book extends AbstractProduct {
         this.aboutText = aboutText;
         this.price = price;
     }
-
-    @Override
-    public int getIdProduct() {
-        return idProduct;
-    }
-
-    @Override
-    public void setIdProduct(int idProduct) {
+    public Book(int idProduct, String title, String author) {
         this.idProduct = idProduct;
-    }
-
-    @Override
-    public String getTitle() {
-        return title;
-    }
-
-    @Override
-    public void setTitle(String title) {
         this.title = title;
-    }
-
-    @Override
-    public String getAuthor() {
-        return author;
-    }
-
-    @Override
-    public void setAuthor(String author) {
         this.author = author;
     }
 
-    @Override
+    public <T> Book(T fromJson) {
+        String stringJson= String.valueOf(fromJson);
+        String[]strings=stringJson.split("\":\"");
+
+    }
+
+   /* public <T> Book(T fromJson) {
+        super();
+    }*/
+
+    public int getIdProduct() {
+        return idProduct;
+    }
+    public void setIdProduct(int idProduct) {
+        this.idProduct = idProduct;
+    }
+    public String getTitle() {
+        return title;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    public String getAuthor() {
+        return author;
+    }
+    public void setAuthor(String author) {
+        this.author = author;
+    }
     public String getAboutText() {
         return aboutText;
     }
-
-    @Override
     public void setAboutText(String aboutText) {
         this.aboutText = aboutText;
     }
-
-    @Override
     public double getPrice() {
         return price;
     }
-
-    @Override
     public void setPrice(double price) {
         this.price = price;
     }
-
-    @Override
     public String getUrl() {
         return url;
     }
-
-    @Override
     public void setUrl(String url) {
         this.url = url;
     }

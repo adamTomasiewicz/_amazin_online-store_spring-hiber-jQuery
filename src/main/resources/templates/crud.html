@@ -21,12 +21,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- nasz css -->
     <link rel="stylesheet" media="screen" href="style.css"/>
+    <link rel="stylesheet" media="screen" href="form-fancy.css"/>
 <!--    <link rel="stylesheet" media="print" href="diff-style.css">-->
     <!-- responsywny css -->
     <!-- <link rel="stylesheet" media="screen and (min-width: 415px) and (max-width: 1023px)" href="tablet.css">
     <link rel="stylesheet" media="screen and (min-width: 1024px)" href="desktop.css"> -->
     <!-- nasz js -->
-    <script defer src="main.js"></script>
+    <script defer src="script.js"></script>
+    <script defer src="crud.js"></script>
 
 </head>
 
@@ -72,6 +74,289 @@
 </nav>
 
 
+<!--BOOK TABLE-->
+<!--BOOK TABLE-->
+<!--BOOK TABLE-->
+
+<div>
+<table class="table table-hover table-bordered table-fixed">
+    <thead>
+<!--    nazwy kolumn refleksja!!!-->
+    <tr >
+        <th scope="col">id</th>
+        <th scope="col">title</th>
+        <th scope="col">author</th>
+<!--        <th scope="col">text</th>-->
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="book: ${books}">
+        <th scope="row" th:text="${book.idProduct}"/></th>
+        <td th:text="${book.title}"/>
+        <td th:text="${book.author}"/>
+<!--        <td th:text="${book.aboutText}"/>-->
+
+    </tr>
+
+    </tbody>
+</table>
+</div>
+<!--book form-->
+<!--book form-->
+<!--book form-->
+
+<div>
+<form action="" method="" novalidate autocomplete="off">
+<div>
+    <label for="book_idProduct">
+        <span>book.IDProduct: </span>
+        <strong><abbr title="required"></abbr></strong>
+    </label><input type="text" id="book_idProduct" name="book_idProduct">
+
+    <label for="book_title">
+        <span>book.Title: </span>
+        <strong><abbr title="required"></abbr>
+        </strong>
+    </label> <input type="text" id="book_title" name="${book_title}">
+    <label for="book_author">
+        <span>book.Author: </span>
+        <strong><abbr title="required"></abbr>
+        </strong>
+    </label><input type="text" id="book_author" name="book_author">
+<!--    <label for="book.text">-->
+<!--        <span>book.Text: </span>-->
+<!--        <strong><abbr title="required"></abbr>-->
+<!--        </strong>-->
+<!--    </label> <input type="text" id="book.text" name="book.text">-->
+</div>
+
+<script></script>
+
+<!--    <input type="button" class="fancy-button" formmethod="post" onclick="location.href='/products/create/1';" value="CREATE" />-->
+ <input type="button" class="fancy-button" onclick="jsonParserBook()" value="CREATE" />
+
+
+
+
+    <!--    <button type="submit" >&ndash;&gt;
+        <span class="text">CREATE
+        </span>
+        <span class="icon">
+            <i class="fa fa-envelope"></i>
+        </span>
+    </button>-->
+
+
+    <button type="submit" class="fancy-button">
+            <span class="text">
+                UPDATE
+            </span>
+        <span class="icon">
+                <i class="fa fa-bath"></i>
+            </span>
+    </button>
+
+    <button type="submit" class="fancy-button">
+            <span class="text">
+                DELETE
+            </span>
+        <span class="icon">
+                <i class="fa fa-bath"></i>
+            </span>
+    </button>
+</div>
+</form>
+</div>
+<!--boardGame table-->
+<div>
+    <table class="table table-hover table-bordered table-fixed">
+        <thead>
+        <tr >
+            <th scope="col">id</th>
+            <th scope="col">title</th>
+            <th scope="col">author</th>
+<!--            <th scope="col">text</th>-->
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="boardGame: ${boardGames}">
+            <th scope="row" th:text="${boardGame.idProduct}"/></th>
+            <td th:text="${boardGame.title}"/>
+            <td th:text="${boardGame.author}"/>
+<!--            <td th:text="${boardGame.aboutText}"/>-->
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!--boardGame form-->
+<div>
+
+    <form action="/crud" method="POST" novalidate autocomplete="off">
+        <div>
+        <label for="boardGame.idProduct">
+            <span>boardGame.IDProduct: </span>
+            <strong><abbr title="required"></abbr>
+            </strong>
+        </label><input type="text" id="boardGame.idProduct" name="boardGame.idProduct">
+
+        <label for="boardGame.title">
+            <span>boardGame.Title: </span>
+            <strong><abbr title="required"></abbr>
+            </strong>
+        </label> <input type="text" id="boardGame.title" name="boardGame.title">
+        <label for="boardGame.author">
+            <span>boardGame.Author: </span>
+            <strong><abbr title="required"></abbr>
+            </strong>
+        </label><input type="text" id="boardGame.author" name="boardGame.author">
+<!--        <label for="boardGame.text">-->
+<!--            <span>boardGame.Text: </span>-->
+<!--            <strong><abbr title="required"></abbr>-->
+<!--            </strong>-->
+<!--        </label> <input type="text" id="boardGame.text" name="boardGame.text">-->
+        </div>
+<div>
+        <button type="submit" class="fancy-button">
+        <span class="text">
+            CREATE
+        </span>
+            <span class="icon">
+            <i class="fa fa-envelope"></i>
+        </span>
+        </button>
+
+        <button type="submit" class="fancy-button">
+            <span class="text">
+                UPDATE
+            </span>
+            <span class="icon">
+                <i class="fa fa-bath"></i>
+            </span>
+        </button>
+
+        <button type="submit" class="fancy-button">
+            <span class="text">
+                DELETE
+            </span>
+            <span class="icon">
+                <i class="fa fa-bath"></i>
+            </span>
+        </button>
+</div>
+    </form>
+</div>
+
+<!--videoGame table-->
+<div>
+    <table class="table table-hover table-bordered table-fixed">
+        <thead>
+        <tr >
+            <th scope="col">id</th>
+            <th scope="col">title</th>
+            <th scope="col">author</th>
+<!--            <th scope="col">text</th>-->
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="videoGame: ${videoGames}">
+            <th scope="row" th:text="${videoGame.idProduct}"/></th>
+            <td th:text="${videoGame.title}"/>
+            <td th:text="${videoGame.author}"/>
+<!--            <td th:text="${videoGame.aboutText}"/>-->
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!--videoGames form-->
+<div>
+    <form action="" method="POST" novalidate autocomplete="off">
+
+<div>
+        <label for="videoGame.idProduct">
+            <span>videoGame.IDProduct: </span>
+            <strong><abbr title="required"></abbr>
+            </strong>
+        </label><input type="text" id="videoGame.idProduct" name="videoGame.idProduct">
+
+        <label for="videoGame.title">
+            <span>videoGame.Title: </span>
+            <strong><abbr title="required"></abbr>
+            </strong>
+        </label> <input type="text" id="videoGame.title" name="videoGame.title">
+        <label for="videoGame.author">
+            <span>videoGame.Author: </span>
+            <strong><abbr title="required"></abbr>
+            </strong>
+        </label><input type="text" id="videoGame.author" name="videoGame.author">
+<!--        <label for="videoGame.text">-->
+<!--            <span>videoGame.Text: </span>-->
+<!--            <strong><abbr title="required"></abbr>-->
+<!--            </strong>-->
+<!--        </label> <input type="text" id="videoGame.text" name="videoGame.text">-->
+</div>
+        <div>
+        <button type="submit" class="fancy-button">
+        <span class="text">
+            CREATE
+        </span>
+            <span class="icon">
+            <i class="fa fa-envelope"></i>
+        </span>
+        </button>
+
+        <button type="submit" class="fancy-button">
+            <span class="text">
+                UPDATE
+            </span>
+            <span class="icon">
+                <i class="fa fa-bath"></i>
+            </span>
+        </button>
+
+        <button type="submit" class="fancy-button">
+            <span class="text">
+                DELETE
+            </span>
+            <span class="icon">
+                <i class="fa fa-bath"></i>
+            </span>
+        </button>
+        </div>
+
+    </form>
+
+</div>
+<!--FICZERY!!!!!!!!!!!!!!-->
+<!--FICZERY!!!!!!!!!!!!!!-->
+<!--FICZERY!!!!!!!!!!!!!!-->
+<!--FICZERY!!!!!!!!!!!!!!-->
+<!-- formularz-->
+<!-- klikalne labelki przenoszace focus -->
+
+<!--action="adres gdzie ma byc wyslany formularz"-->
+<!--method="GET/POST GET - widoczny w url, POST - widozny w nagłuwkach żadania-->
+
+<!--Breadcrumb - rozwija sciezke pozwala na przejscie w zagniezdzeniu wstecz-->
+<!-- koncepcje CRUDa:-->
+<!-- a) mapowanie linkow w thymeleaf
+product/book [GET] - pobranie listy
+product/book [POST] - dodanie elementu
+product/book/1 [GET] - pobranie informacji o elemencie
+product/book/1 [PUT] - aktualizacja elementu
+product/book/1 [DELETE] - usuniecie elementu
+-->
+<!-- b) ajax i autoodswiezajaca sie tabela z formlarzem add i przyciskami update, delete  -->
+<!--<table>-->
+<!--    &lt;!&ndash;/*@thymesVar id="books" type="java"*/&ndash;&gt;-->
+<!--    <tr th:each="abstractProduct: ${abstractProducts}">-->
+<!--        &lt;!&ndash;/*@thymesVar id="id" type="java"*/&ndash;&gt;-->
+<!--        &lt;!&ndash;/*@thymesVar id="id" type="java"*/&ndash;&gt;-->
+<!--        &lt;!&ndash;/*@thymesVar id="IDBook" type="java"*/&ndash;&gt;-->
+<!--        <td th:text="${abstractProduct.idproduct}"/>-->
+<!--        <td th:text="${abstractProduct.title}"/>-->
+<!--        <td th:text="${abstractProduct.author}"/>-->
+<!--    </tr>-->
+<!--</table>-->
 
 
 

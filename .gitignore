@@ -4,7 +4,7 @@
 *.class
 .idea
 .idea/
-
+HibernateUtilsSF.java
 # Log file
 *.log
 

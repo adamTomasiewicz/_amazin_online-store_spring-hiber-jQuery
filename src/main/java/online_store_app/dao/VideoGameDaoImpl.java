@@ -1,8 +1,8 @@
-package online_store_app.services;
+package online_store_app.dao;
 
 
 import online_store_app.dao.InterfaceDAO;
-import online_store_app.model.BoardGame;
+import online_store_app.model.VideoGame;
 import online_store_app.services.HibernateUtilsSF;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -14,68 +14,68 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
-@Qualifier("boardGames")
-@Component
-public class BoardGameDaoImpl implements InterfaceDAO<BoardGame> {
 
+@Qualifier("videoGames")
+@Component
+public class VideoGameDaoImpl implements InterfaceDAO<VideoGame> {
     @Autowired
     private HibernateUtilsSF hibernateUtilsSF;
 
-   /* public BoardGameDaoImpl() {
+   /* public VideoGameDaoImpl() {
         this.hibernateUtilsSF = new HibernateUtilsSF();
-    }*/
-
+    }
+*/
 
     @Override
-    public void addProduct(BoardGame boardGame) {
+    public void addProduct(VideoGame videoGame) {
         SessionFactory sessionFactory = hibernateUtilsSF.getSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction tx = session.beginTransaction();
-        List<BoardGame> boardGames = session.createQuery("from BoardGame ", BoardGame.class).list();
-        session.save(boardGame);
+        List<VideoGame> videoGames = session.createQuery("from VideoGame ", VideoGame.class).list();
+        session.save(videoGame);
         tx.commit();
         session.close();
     }
 
     @Override
-    public void updateProduct(BoardGame boardGame) {
+    public void updateProduct(VideoGame videoGame) {
         Session session = hibernateUtilsSF.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
-        session.update(boardGame);
+        session.update(videoGame);
         tx.commit();
         session.close();
     }
 
     @Override
-    public void deleteProduct(BoardGame boardGame) {
+    public void deleteProduct(VideoGame videoGame) {
         Session session = hibernateUtilsSF.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
-        session.delete(boardGame);
+        session.delete(videoGame);
         tx.commit();
         session.close();
     }
 
     @Override
-    public Optional<BoardGame> getProductByID(Integer id) {
+    public Optional<VideoGame> getProductByID(Integer id) {
         Session session = this.hibernateUtilsSF.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
-        BoardGame boardGame = (BoardGame) session
+        VideoGame videoGame = (VideoGame) session
                 .createQuery("FROM VideoGame WHERE id=" + id)
                 .uniqueResult();
         tx.commit();
         session.close();
-        return Optional.ofNullable(boardGame);
+        return Optional.ofNullable(videoGame);
     }
 
     @Override
-    public List<BoardGame> getAllProductsFromDB() {
+    public List<VideoGame> getAllProductsFromDB() {
         Session session = this.hibernateUtilsSF.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
-        List<BoardGame> boardGames = session
-                .createQuery("FROM BoardGame ")
+        List<VideoGame> videoGames = session
+                .createQuery("FROM VideoGame ")
                 .list();
         tx.commit();
         session.close();
-        return boardGames;
+        return videoGames;
     }
 }

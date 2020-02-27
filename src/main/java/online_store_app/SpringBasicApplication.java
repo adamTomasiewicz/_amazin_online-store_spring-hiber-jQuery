@@ -2,12 +2,15 @@ package online_store_app;
 
 import online_store_app.auth.Users;
 import online_store_app.configuration.AppConfiguration;
-import online_store_app.model.AbstractProduct;
+import online_store_app.dao.BookDaoImpl;
+import online_store_app.model.Book;
 import online_store_app.services.AbstractProductUtils;
-import online_store_app.services.UsersDaoImpl;
+import online_store_app.dao.UsersDaoImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import java.util.Optional;
 
 @SpringBootApplication
 public class SpringBasicApplication {
@@ -17,13 +20,14 @@ public class SpringBasicApplication {
 		AnnotationConfigApplicationContext context =
 				new AnnotationConfigApplicationContext(AppConfiguration.class);
 
-		UsersDaoImpl usersDao = context.getBean(UsersDaoImpl.class);
-		//test user
-		Users testUser = new Users("adam.tomasiewicz@outlook.com","password1");
-		usersDao.addProduct(testUser);
-		System.out.println(usersDao.getProductByID(1));
-		AbstractProductUtils productUtils = context.getBean(AbstractProductUtils.class);
-		productUtils.loadData();
+
+//		UsersDaoImpl usersDao = context.getBean(UsersDaoImpl.class);
+//		//test user
+//		Users testUser = new Users("adam.tomasiewicz@outlook.com","password1");
+//		usersDao.addProduct(testUser);
+//		System.out.println(usersDao.getProductByID(1));
+//		AbstractProductUtils productUtils = context.getBean(AbstractProductUtils.class);
+//		productUtils.loadData();
 //		List<Users> listOfUsers = userAuthService.getAllUsers();
 //		for (Users user: listOfUsers) {
 //			System.out.println(user);

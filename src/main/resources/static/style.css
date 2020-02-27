@@ -1,5 +1,5 @@
 body {
-    background-color: lightcyan;
+    background-color: #f5ffff;
     /*background-color: red;*/
 }
 .container-fluid{
@@ -57,10 +57,10 @@ nav {
     width: 250px;
     height: 320px;
 }
-
-
-
-
+.product{
+    background: #fff;
+    margin: 5px;
+}
 /*.leftContainer{*/
 /* background-color: red;*/
 /*}*/

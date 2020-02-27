@@ -1,25 +1,31 @@
 package online_store_app.services;
 
-import online_store_app.model.AbstractProduct;
+import online_store_app.dao.BoardGameDaoImpl;
+import online_store_app.dao.BookDaoImpl;
+import online_store_app.dao.VideoGameDaoImpl;
 import online_store_app.model.BoardGame;
 import online_store_app.model.Book;
 import online_store_app.model.VideoGame;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Component
 public class AbstractProductUtils {
 
-    @Autowired
+    final
     BookDaoImpl bookDao;
-    @Autowired
+    final
     BoardGameDaoImpl boardGameDao;
-    @Autowired
+    final
     VideoGameDaoImpl videoGameDao;
+
+    public AbstractProductUtils(BookDaoImpl bookDao, BoardGameDaoImpl boardGameDao, VideoGameDaoImpl videoGameDao) {
+        this.bookDao = bookDao;
+        this.boardGameDao = boardGameDao;
+        this.videoGameDao = videoGameDao;
+    }
 
 
     //int idProduct; String title; String author; String aboutText; double price; List<String> listOfTags;String url;
