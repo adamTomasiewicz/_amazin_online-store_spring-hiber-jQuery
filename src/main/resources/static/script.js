@@ -1,6 +1,7 @@
-// const $addProduct = $('a');
-// // const $updateProduct = $('b');
-// // const $deleteProduct = $btn.find('c');
+/*
+const $btn = $();
+const $updateProduct = $('b');
+const $deleteProduct = $btn.find('c');
 $(document).ready(function() {
     $btn.on('click', function() {
         $users.html('');
@@ -27,4 +28,4 @@ $(document).ready(function() {
                 $spinner.hide();
             });
     })
-}
+}*/

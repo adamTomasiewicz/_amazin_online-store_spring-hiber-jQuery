@@ -27,6 +27,7 @@
     <link rel="stylesheet" media="screen and (min-width: 1024px)" href="desktop.css"> -->
     <!-- nasz js -->
     <script defer src="main.js"></script>
+    <script defer src="file.js"></script>
 
 </head>
 
@@ -88,22 +89,62 @@
 
 <!--</form>-->
 <!-- upload file -->
-<p>
-    <label for="name">
-        <span>Name: </span>
-        <strong><abbr title="required"></abbr>
-        </strong>
-    </label>
-    <input type="text" id="name" name="username">
-</p>
 
-<div class="file-input">
-    upload file
-    <i class="fa fa-file"></i>
-    <input type="file">
+<div>
+<!--   <form action="" method="" novalidate autocomplete="off"></form>-->
+
+<!--        <label for="file_uri">-->
+<!--            <span>Name: </span>-->
+<!--            <strong><abbr title="required"></abbr>-->
+<!--            </strong>-->
+<!--        </label>-->
+<!--        <input type="text" id="file_uri" name="file_uri">-->
+
+<!--    <div>-->
+<!--        <input id="button_list" type="button" class="fancy-button" onclick="jsonParser_FileUpload" value="upload"/>-->
+<!--    </div>-->
 </div>
 
-<!-- download file -->
+
+<form enctype="multipart/form-data" action="/files" method="POST" name="file" value="file">
+
+    <div class="file-input"> upload file
+        <i class="fa fa-file"></i>
+        <input type="file" required="file" name="file" value="file">
+    </div>
+    <button type="submit" >SubmitForm</button>
+    <button type="submit" onclick="postRequest_FileUpload()">postRequest</button>
+</form>
+<!-- list files -->
+<div>
+
+    <table class="table table-hover table-bordered table-fixed">
+        <thead>
+        <tr >
+            <th scope="col">file_name</th>
+            <th scope="col">file_downloadUri</th>
+            <th scope="col">file_deleteUri</th>
+            <!--            <th scope="col">text</th>-->
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="file: ${files}">
+            <td th:text="${file.name}"/>
+            <td>
+                <a th:href="${file.downloadUri}" >download</a>
+            </td>
+           <td>
+            <input id="button_delete" type="button" class="fancy-button"
+            th:onclick="window.location.href = ${file.deleteUri};" th:value="${file.deleteUri}" />
+           </td>
+            <!--            <td th:text="${videoGame.aboutText}"/>-->
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
 
 </body>
 </html>

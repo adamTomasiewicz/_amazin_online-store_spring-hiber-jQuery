@@ -129,7 +129,6 @@ public class LocalFileService {
                             .path(f.getFileName().toString())
                             .toUriString();
 
-                    //todo dorobić ścieżkę do kasowania pliku
                     String deleteUri = ServletUriComponentsBuilder
                             .fromCurrentContextPath()
                             .path(DELETE_URI)
