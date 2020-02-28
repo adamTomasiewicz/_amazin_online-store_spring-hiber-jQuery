@@ -31,7 +31,7 @@ import org.springframework.web.multipart.MultipartFile;
             return localFileService.getFile(filename);
         }
 
-        @DeleteMapping("/files/delete/{filename}") //todo tu powinien być @DeleteMapping
+        @DeleteMapping("/files/delete/{filename}")
         public ResponseEntity<?> deleteFile(@PathVariable String filename) {
             return localFileService.deleteFile(filename);
         }

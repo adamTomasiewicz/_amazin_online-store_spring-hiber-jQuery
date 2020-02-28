@@ -26,6 +26,23 @@ pdf z ksiazka, jar/zip z grą, jpg z okladka
 --------
 ### FRONT END i STRUNKTURA STRONY:
 --------
+
+![GitHub Logo](/images/amazong.png)
+Format: ![Alt Text](url)
+
+![GitHub Logo](/images/fileChooser.jpg)
+Format: ![Alt Text](url)
+
+amazong
+![amazong](https://ibb.co/6YVg6d7)
+
+aboutUs
+!(https://ibb.co/WPkkG9B)
+
+file Chooser
+!(https://ibb.co/2ShrrZT)
+
+
 ```
 kolorystyka:
 -ciemny niebieski górny pasek menu
@@ -55,6 +72,7 @@ strony na których mozemy sie wzorować:
 - [https://www.morele.net/](https://www.morele.net/)
 - [https://www.amazon.com/](https://www.amazon.com/)
 - [https://www.empik.com/](https://www.empik.com/)
+
 
 -------------
 ### TASKI BIEŻĄCE:
