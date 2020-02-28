@@ -10,9 +10,8 @@ import javax.persistence.*;
 @Table(name = "files")
 public class WebFile {
     @Id
-    @GeneratedValue(generator = "uuid")
-    @GenericGenerator(name = "uuid", strategy = "uuid2")
-    private String webFileID;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long webFileID;
     private String webFileName;
     private String webFileType;
     @Lob
@@ -27,10 +26,10 @@ public class WebFile {
         this.file = file;
     }
 
-    public String getWebFileID() {
+    public long getWebFileID() {
         return webFileID;
     }
-    public void setWebFileID(String webFileID) {
+    public void setWebFileID(long webFileID) {
         this.webFileID = webFileID;
     }
     public String getWebFileName() {
