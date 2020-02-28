@@ -19,7 +19,7 @@ public class CrudProductsController {
         BoardGameDaoImpl boardGameDao;
         VideoGameDaoImpl videoGameDao;
         UsersDaoImpl userAuthService;
-@Autowired
+        @Autowired
         public CrudProductsController(BookDaoImpl bookDao, BoardGameDaoImpl boardGameDao, VideoGameDaoImpl videoGameDao, UsersDaoImpl userAuthService) {
                 this.bookDao = bookDao;
                 this.boardGameDao = boardGameDao;
@@ -27,12 +27,6 @@ public class CrudProductsController {
                 this.userAuthService = userAuthService;
         }
 
-        /** ONLINE-STORE PAGE MAPPINGS */
-//        @PostMapping(value = "/crud")
-//        public String postSaveBook(@ModelAttribute AbstractProduct abstractProduct) {
-//            bookDao.addProduct((Book) abstractProduct);
-//            return "crud";
-//        }
 
         @PostMapping(value = "/product/book/create")
         public String createBook(@RequestBody String jsonString){

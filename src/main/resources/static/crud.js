@@ -1,4 +1,5 @@
 function jsonParser_CreateBook(){
+
     var json = '{"idProduct":"'+ document.getElementById('book_idProduct').value +'", ' +
         '"title":"'+ document.getElementById('book_title').value+'", ' +
         '"author":"'+ document.getElementById('book_author').value+'", ' +

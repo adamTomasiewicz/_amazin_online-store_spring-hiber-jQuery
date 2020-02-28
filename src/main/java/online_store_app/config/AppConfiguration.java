@@ -1,4 +1,4 @@
-package online_store_app.configuration;
+package online_store_app.config;
 
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
