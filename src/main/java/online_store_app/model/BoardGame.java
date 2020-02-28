@@ -14,6 +14,7 @@ public class BoardGame extends AbstractProduct {
     protected double price;
     // protected List<String> listOfTags;
     protected String url;
+    protected String urlImage;
 
     public BoardGame() {
     }
@@ -35,10 +36,11 @@ public class BoardGame extends AbstractProduct {
         this.url = url;
     }
 
-    public BoardGame(int idProduct, String title, String author) {
+    public BoardGame(int idProduct, String title, String author, String urlImage) {
         this.idProduct = idProduct;
         this.title = title;
         this.author = author;
+        this.urlImage = urlImage;
     }
     public <T> BoardGame(T fromJson) {
         String stringJson= String.valueOf(fromJson);
@@ -82,5 +84,13 @@ public class BoardGame extends AbstractProduct {
     }
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getUrlImage() {
+        return urlImage;
+    }
+
+    public void setUrlImage(String urlImage) {
+        this.urlImage = urlImage;
     }
 }

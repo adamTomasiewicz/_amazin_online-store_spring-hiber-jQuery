@@ -19,15 +19,15 @@ public class VideoGame extends AbstractProduct {
     protected double price;
     // protected List<String> listOfTags;
     protected String url;
+    protected String urlImage;
 
     public VideoGame() {
     }
-    public VideoGame(int idProduct, String title, String author, String aboutText, double price) {
+    public VideoGame(int idProduct, String title, String author, String urlImage) {
         this.idProduct = idProduct;
         this.title = title;
         this.author = author;
-        this.aboutText = aboutText;
-        this.price = price;
+        this.urlImage = urlImage;
     }
     public VideoGame(int idProduct, String title, String author, String aboutText, double price, List<String> listOfTags, String url) {
         this.idProduct = idProduct;
@@ -38,6 +38,10 @@ public class VideoGame extends AbstractProduct {
         //this.listOfTags = listOfTags;
         this.url = url;
     }
+
+
+
+
 
     public int getIdProduct() {
         return idProduct;
@@ -72,5 +76,13 @@ public class VideoGame extends AbstractProduct {
     }
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getUrlImage() {
+        return urlImage;
+    }
+
+    public void setUrlImage(String urlImage) {
+        this.urlImage = urlImage;
     }
 }

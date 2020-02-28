@@ -49,10 +49,11 @@ public class Book extends AbstractProduct {
         this.aboutText = aboutText;
         this.price = price;
     }
-    public Book(int idProduct, String title, String author) {
+    public Book(int idProduct, String title, String author, String urlImage) {
         this.idProduct = idProduct;
         this.title = title;
         this.author = author;
+        this.urlImage = urlImage;
     }
 
     public <T> Book(T fromJson) {

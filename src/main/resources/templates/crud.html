@@ -43,7 +43,10 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-                <a class="nav-link" href="/index">MIEJSCE NA LOGO<span class="sr-only">(current)</span> </a>
+                <a class="nav-link" href="/index">
+                    <img class = "logo" src="https://i.imgur.com/SDBKOn9.png" alt="logo" width="120" height="60"/>
+                    <span class="sr-only">(current)</span>
+                </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span> </a>
@@ -86,6 +89,7 @@
         <th scope="col">id</th>
         <th scope="col">title</th>
         <th scope="col">author</th>
+        <th scope="col">urlImage</th>
 <!--        <th scope="col">text</th>-->
     </tr>
     </thead>
@@ -202,6 +206,7 @@
             <th scope="col">id</th>
             <th scope="col">title</th>
             <th scope="col">author</th>
+            <th scope="col">urlImage</th>
 <!--            <th scope="col">text</th>-->
         </tr>
         </thead>
@@ -210,6 +215,7 @@
             <th scope="row" th:text="${boardGame.idProduct}"/></th>
             <td th:text="${boardGame.title}"/>
             <td th:text="${boardGame.author}"/>
+            <td th:text="${boardGame.urlImage}"/>
 <!--            <td th:text="${boardGame.aboutText}"/>-->
         </tr>
         </tbody>
@@ -221,27 +227,28 @@
     <form action="" method="" novalidate autocomplete="off">
         <div>
         <label for="boardGame_idProduct">
-            <span>boardGame.IDProduct: </span>
+            <span>bGame.IDProduct: </span>
             <strong><abbr title="required"></abbr>
             </strong>
         </label><input type="text" id="boardGame_idProduct" name="boardGame_idProduct">
 
         <label for="boardGame_title">
-            <span>boardGame.Title: </span>
+            <span>bGame.Title: </span>
             <strong><abbr title="required"></abbr>
             </strong>
         </label> <input type="text" id="boardGame_title" name="boardGame_title">
         <label for="boardGame_author">
-            <span>boardGame.Author: </span>
+            <span>bGame.Author: </span>
             <strong><abbr title="required"></abbr>
             </strong>
         </label><input type="text" id="boardGame_author" name="boardGame_author">
-<!--        <label for="boardGame.text">-->
-<!--            <span>boardGame.Text: </span>-->
-<!--            <strong><abbr title="required"></abbr>-->
-<!--            </strong>-->
-<!--        </label> <input type="text" id="boardGame.text" name="boardGame.text">-->
+         <label for="boardGame_urlImage">
+                <span>bGame.urlImage: </span>
+                <strong><abbr title="required"></abbr>
+                </strong>
+         </label><input type="text" id="boardGame_urlImage" name="boardGame_urlImage">
         </div>
+
         <div>
             <input type="button" class="fancy-button" onclick="jsonParser_CreateBoardGame()" value="CREATE" />
             <input type="button" class="fancy-button" onclick="jsonParser_UpdateBoardGame()" value="UPDATE"/>
@@ -258,6 +265,7 @@
             <th scope="col">id</th>
             <th scope="col">title</th>
             <th scope="col">author</th>
+            <th scope="col">urlImage</th>
 <!--            <th scope="col">text</th>-->
         </tr>
         </thead>
@@ -266,6 +274,7 @@
             <th scope="row" th:text="${videoGame.idProduct}"/></th>
             <td th:text="${videoGame.title}"/>
             <td th:text="${videoGame.author}"/>
+            <td th:text="${videoGame.urlImage}"/>
 <!--            <td th:text="${videoGame.aboutText}"/>-->
         </tr>
         </tbody>
@@ -277,21 +286,26 @@
 
 <div>
         <label for="videoGame_idProduct">
-            <span>videoGame.IDProduct: </span>
+            <span>vGame.IDProduct: </span>
             <strong><abbr title="required"></abbr>
             </strong>
         </label><input type="text" id="videoGame_idProduct" name="videoGame_idProduct">
 
         <label for="videoGame_title">
-            <span>videoGame.Title: </span>
+            <span>vGame.Title: </span>
             <strong><abbr title="required"></abbr>
             </strong>
         </label> <input type="text" id="videoGame_title" name="videoGame_title">
         <label for="videoGame_author">
-            <span>videoGame.Author: </span>
+            <span>vGame.Author: </span>
             <strong><abbr title="required"></abbr>
             </strong>
         </label><input type="text" id="videoGame_author" name="videoGame_author">
+        <label for="videoGame_urlImage">
+            <span>vGame.urlImage: </span>
+            <strong><abbr title="required"></abbr>
+            </strong>
+        </label><input type="text" id="videoGame_urlImage" name="videoGame_urlImage">
 <!--        <label for="videoGame.text">-->
 <!--            <span>videoGame.Text: </span>-->
 <!--            <strong><abbr title="required"></abbr>-->

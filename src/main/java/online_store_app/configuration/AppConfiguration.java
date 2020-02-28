@@ -18,7 +18,7 @@ public class AppConfiguration {
                 .driverClassName("org.postgresql.Driver")
                 .url("jdbc:postgresql://localhost:5432/onlineStore")
                 .username("postgres")
-                .password("postgres1")
+                .password("academik1718")
                 .build();
     }
 

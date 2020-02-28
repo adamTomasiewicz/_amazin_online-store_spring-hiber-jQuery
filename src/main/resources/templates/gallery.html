@@ -41,7 +41,10 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-                <a class="nav-link" href="/index">MIEJSCE NA LOGO<span class="sr-only">(current)</span> </a>
+                <a class="nav-link" href="/index">
+                    <img class = "logo" src="https://i.imgur.com/SDBKOn9.png" alt="logo" width="120" height="60"/>
+                    <span class="sr-only">(current)</span>
+                </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span> </a>
@@ -88,9 +91,9 @@
 <!--        <td th:text="${book.aboutText}"/>-->
 <!--    </tr>-->
         <article th:each="book: ${books}" class="col-12 col-sm-6 col-md-4 col-xl-3 product">
-            <label th:text="${book.idProduct}"></label><h6 th:text="${book.title}" ></h6>
+            <h6 th:text="${book.title}" ></h6>
             <figure>
-                <img th:text = "${book.urlImage}" class="img-fluid">
+                <img th:src="${book.urlImage}" class="img-fluid" height="200" width="200">
 <!--                <img src="https://c4.wallpaperflare.com/wallpaper/167/524/934/images-games-the-witcher-wallpaper-preview.jpg" class="img-fluid">-->
             </figure>
             <h6 th:text="${book.author}"></h6>
@@ -112,9 +115,9 @@
         <!--    </tr>-->
 
         <article th:each="boardGame: ${boardGames}" class="col-12 col-sm-6 col-md-4 col-xl-3 product">
-            <label th:text="${boardGame.idProduct}"></label><h6 th:text="${boardGame.title}" ></h6>
+           <h6 th:text="${boardGame.title}" ></h6>
             <figure>
-                <img src="https://c4.wallpaperflare.com/wallpaper/167/524/934/images-games-the-witcher-wallpaper-preview.jpg" class="img-fluid">
+                <img th:src="${boardGame.urlImage}" class="img-fluid" height="200" width="200">
             </figure>
             <h6 th:text="${boardGame.author}"></h6>
             <button class="btn btn-primary">
@@ -135,9 +138,9 @@
         <!--    </tr>-->
 
         <article th:each="videoGame: ${videoGames}" class="col-12 col-sm-6 col-md-4 col-xl-3 product">
-            <label th:text="${videoGame.idProduct}"></label><h6 th:text="${videoGame.title}" ></h6>
+            <h6 th:text="${videoGame.title}" ></h6>
             <figure>
-                <img src="https://c4.wallpaperflare.com/wallpaper/167/524/934/images-games-the-witcher-wallpaper-preview.jpg" class="img-fluid">
+                <img th:src="${videoGame.urlImage}" class="img-fluid" height="200" width="200">
             </figure>
             <h6 th:text="${videoGame.author}"></h6>
             <button class="btn btn-primary">
@@ -147,17 +150,17 @@
         </article>
 
 
-        <article class="col-12 col-sm-6 col-md-4 col-xl-3 product">
-            <h3>Produkt</h3>
+<!--        <article class="col-12 col-sm-6 col-md-4 col-xl-3 product">-->
+<!--            <h3>Produkt</h3>-->
 
-            <figure>
-                <img src="https://www.placecage.com/c/1000/1000" class="img-fluid">
-            </figure>
+<!--            <figure>-->
+<!--                <img src="https://www.placecage.com/c/1000/1000" class="img-fluid">-->
+<!--            </figure>-->
 
-            <button class="btn btn-primary">
-                Dodaj do koszyka
-            </button>
-        </article>
+<!--            <button class="btn btn-primary">-->
+<!--                Dodaj do koszyka-->
+<!--            </button>-->
+<!--        </article>-->
     </div>
 
 </div>

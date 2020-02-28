@@ -1,7 +1,8 @@
 function jsonParser_CreateBook(){
     var json = '{"idProduct":"'+ document.getElementById('book_idProduct').value +'", ' +
         '"title":"'+ document.getElementById('book_title').value+'", ' +
-        '"author":"'+ document.getElementById('book_author').value+'"}';
+        '"author":"'+ document.getElementById('book_author').value+'", ' +
+        '"urlImage":"'+ document.getElementById('book_urlImage').value+'"}';
 
     $.ajax({
         url : "/product/book/create",
@@ -25,7 +26,9 @@ function jsonParser_CreateBook(){
 function jsonParser_UpdateBook(){
     var json = '{"idProduct":"'+ document.getElementById('book_idProduct').value +'", ' +
         '"title":"'+ document.getElementById('book_title').value+'", ' +
-        '"author":"'+ document.getElementById('book_author').value+'"}';
+        '"author":"'+ document.getElementById('book_author').value+'", ' +
+        '"urlImage":"'+ document.getElementById('book_urlImage').value+'"}';
+
     $.ajax({
         url : "/product/book/update",
         type : "PUT",
@@ -48,7 +51,9 @@ function jsonParser_UpdateBook(){
 function jsonParser_DeleteBook(){
     var json = '{"idProduct":"'+ document.getElementById('book_idProduct').value +'", ' +
         '"title":"'+ document.getElementById('book_title').value+'", ' +
-        '"author":"'+ document.getElementById('book_author').value+'"}';
+        '"author":"'+ document.getElementById('book_author').value+'", ' +
+        '"urlImage":"'+ document.getElementById('book_urlImage').value+'"}';
+
     $.ajax({
         url : "/product/book/delete",
         type : "DELETE",
@@ -71,7 +76,9 @@ function jsonParser_DeleteBook(){
 function jsonParser_CreateBoardGame(){
     var json = '{"idProduct":"'+ document.getElementById('boardGame_idProduct').value +'", ' +
         '"title":"'+ document.getElementById('boardGame_title').value+'", ' +
-        '"author":"'+ document.getElementById('boardGame_author').value+'"}';
+        '"author":"'+ document.getElementById('boardGame_author').value+'", ' +
+        '"urlImage":"'+ document.getElementById('boardGame_urlImage').value+'"}';
+
     $.ajax({
         url : "/product/boardgame/create",
         type : "POST",
@@ -94,7 +101,9 @@ function jsonParser_CreateBoardGame(){
 function jsonParser_UpdateBoardGame(){
     var json = '{"idProduct":"'+ document.getElementById('boardGame_idProduct').value +'", ' +
         '"title":"'+ document.getElementById('boardGame_title').value+'", ' +
-        '"author":"'+ document.getElementById('boardGame_author').value+'"}';
+        '"author":"'+ document.getElementById('boardGame_author').value+'", ' +
+        '"urlImage":"'+ document.getElementById('boardGame_urlImage').value+'"}';
+
     $.ajax({
         url : "/product/boardgame/update",
         type : "PUT",
@@ -115,9 +124,11 @@ function jsonParser_UpdateBoardGame(){
 }
 
 function jsonParser_DeleteBoardGame(){
-    var json = '{"idProduct":"'+ document.getElementById('boardgame_idProduct').value +'", ' +
-        '"title":"'+ document.getElementById('boardgame_title').value+'", ' +
-        '"author":"'+ document.getElementById('boardgame_author').value+'"}';
+    var json = '{"idProduct":"'+ document.getElementById('boardGame_idProduct').value +'", ' +
+        '"title":"'+ document.getElementById('boardGame_title').value+'", ' +
+        '"author":"'+ document.getElementById('boardGame_author').value+'", ' +
+        '"urlImage":"'+ document.getElementById('boardGame_urlImage').value+'"}';
+
     $.ajax({
         url : "/product/boardgame/delete",
         type : "DELETE",
@@ -140,7 +151,8 @@ function jsonParser_DeleteBoardGame(){
 function jsonParser_CreateVideoGame(){
     var json = '{"idProduct":"'+ document.getElementById('videoGame_idProduct').value +'", ' +
         '"title":"'+ document.getElementById('videoGame_title').value+'", ' +
-        '"author":"'+ document.getElementById('videoGame_author').value+'"}';
+        '"author":"'+ document.getElementById('videoGame_author').value+'", ' +
+        '"urlImage":"'+ document.getElementById('videoGame_urlImage').value+'"}';
 
     $.ajax({
         url : "/product/videogame/create",
@@ -164,7 +176,9 @@ function jsonParser_CreateVideoGame(){
 function jsonParser_UpdateVideoGame(){
     var json = '{"idProduct":"'+ document.getElementById('videoGame_idProduct').value +'", ' +
         '"title":"'+ document.getElementById('videoGame_title').value+'", ' +
-        '"author":"'+ document.getElementById('videoGame_author').value+'"}';
+        '"author":"'+ document.getElementById('videoGame_author').value+'", ' +
+        '"urlImage":"'+ document.getElementById('videoGame_urlImage').value+'"}';
+
     $.ajax({
         url : "/product/videogame/update",
         type : "PUT",
@@ -187,7 +201,9 @@ function jsonParser_UpdateVideoGame(){
 function jsonParser_DeleteVideoGame(){
     var json = '{"idProduct":"'+ document.getElementById('videoGame_idProduct').value +'", ' +
         '"title":"'+ document.getElementById('videoGame_title').value+'", ' +
-        '"author":"'+ document.getElementById('videoGame_author').value+'"}';
+        '"author":"'+ document.getElementById('videoGame_author').value+'", ' +
+        '"urlImage":"'+ document.getElementById('videoGame_urlImage').value+'"}';
+
     $.ajax({
         url : "/product/videogame/delete",
         type : "DELETE",
