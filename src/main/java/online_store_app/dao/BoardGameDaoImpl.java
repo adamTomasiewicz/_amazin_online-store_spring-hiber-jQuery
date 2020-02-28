@@ -18,20 +18,18 @@ import java.util.Optional;
 @Component
 public class BoardGameDaoImpl implements InterfaceDAO<BoardGame> {
 
-    @Autowired
     private HibernateUtilsSF hibernateUtilsSF;
-
-   /* public BoardGameDaoImpl() {
+    @Autowired
+   public BoardGameDaoImpl() {
         this.hibernateUtilsSF = new HibernateUtilsSF();
-    }*/
+    }
 
 
     @Override
     public void addProduct(BoardGame boardGame) {
-        SessionFactory sessionFactory = hibernateUtilsSF.getSessionFactory();
-        Session session = sessionFactory.openSession();
+        Session session = hibernateUtilsSF.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
-        List<BoardGame> boardGames = session.createQuery("from BoardGame ", BoardGame.class).list();
+        //List<BoardGame> boardGames = session.createQuery("from BoardGame ", BoardGame.class).list();
         session.save(boardGame);
         tx.commit();
         session.close();

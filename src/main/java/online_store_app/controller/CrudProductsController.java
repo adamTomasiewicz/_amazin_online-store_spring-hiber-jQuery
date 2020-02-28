@@ -15,14 +15,17 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class CrudProductsController {
 
-        @Autowired
-        BookDaoImpl bookDao = new BookDaoImpl();
-        @Autowired
-        BoardGameDaoImpl boardGameDao = new BoardGameDaoImpl();
-        @Autowired
-        VideoGameDaoImpl videoGameDao=new VideoGameDaoImpl();
-        @Autowired
+        BookDaoImpl bookDao;
+        BoardGameDaoImpl boardGameDao;
+        VideoGameDaoImpl videoGameDao;
         UsersDaoImpl userAuthService;
+@Autowired
+        public CrudProductsController(BookDaoImpl bookDao, BoardGameDaoImpl boardGameDao, VideoGameDaoImpl videoGameDao, UsersDaoImpl userAuthService) {
+                this.bookDao = bookDao;
+                this.boardGameDao = boardGameDao;
+                this.videoGameDao = videoGameDao;
+                this.userAuthService = userAuthService;
+        }
 
         /** ONLINE-STORE PAGE MAPPINGS */
 //        @PostMapping(value = "/crud")
