@@ -56,19 +56,5 @@ public class AmazinOnlineStoreController {
         return "about-us";
     }
 
-    /** MY-ACCOUNT PAGE MAPPINGS */
-    @GetMapping(value = "/myAccount")
-    public String getMyAccount(Model model) {
-       // model.addAttribute("user", new Users());
-        return "my-account";
-    }
 
-    @PostMapping(value = "/myAccount")
-    public String postSaveUser(@ModelAttribute Users user) {
-        if (user.getEmail().equals("adam") & user.getPassword().equals("adam1")) {
-            System.out.println("zalogowano użytkownika adam");
-            return "redirect:/home";
-        }
-        else return "my-account";
-    }
 }

@@ -1,7 +1,7 @@
 package online_store_app.services;
 
 import online_store_app.auth.Users;
-import online_store_app.model.AbstractProduct;
+import online_store_app.model.WebFile;
 import online_store_app.model.BoardGame;
 import online_store_app.model.Book;
 import online_store_app.model.VideoGame;
@@ -9,9 +9,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
-import org.hibernate.context.spi.CurrentSessionContext;
 import org.hibernate.service.ServiceRegistry;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.Properties;
@@ -46,7 +44,7 @@ public class HibernateUtilsSF {
             properties.put(Environment.SHOW_SQL, "true");
             properties.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
             // properties.put(Environment.DIALECT, "PostgresSQL95Dialect");
-            properties.put(Environment.HBM2DDL_AUTO, "update"); //actions on tables: update / create / create-drop / none
+            properties.put(Environment.HBM2DDL_AUTO, "create"); //actions on tables: update / create / create-drop / none
             //add properties to configuration
             configuration = new Configuration();
             configuration.setProperties(properties);
@@ -55,6 +53,7 @@ public class HibernateUtilsSF {
             configuration.addAnnotatedClass(Book.class);
             configuration.addAnnotatedClass(BoardGame.class);
             configuration.addAnnotatedClass(VideoGame.class);
+            configuration.addAnnotatedClass(WebFile.class);
             /**service registry */
             serviceRegistry= new StandardServiceRegistryBuilder()
                     .applySettings(configuration.getProperties())
