@@ -1,26 +1,18 @@
 package online_store_app;
 
-import online_store_app.auth.Users;
 import online_store_app.configuration.AppConfiguration;
-import online_store_app.dao.BookDaoImpl;
-import online_store_app.model.Book;
-import online_store_app.services.AbstractProductUtils;
-import online_store_app.dao.UsersDaoImpl;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-import java.util.Optional;
-
 
 //@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 @SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
 @EntityScan("online_store_app.model")
-@EnableJpaRepositories("online_store_app.repository")
+@EnableJpaRepositories("online_store_app.repo")
 public class SpringBasicApplication {
 
 	public static void main(String[] args) {

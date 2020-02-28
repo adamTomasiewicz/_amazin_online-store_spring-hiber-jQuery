@@ -40,6 +40,12 @@ public class BoardGame extends AbstractProduct {
         this.title = title;
         this.author = author;
     }
+    public <T> BoardGame(T fromJson) {
+        String stringJson= String.valueOf(fromJson);
+        String[]strings=stringJson.split("\":\"");
+
+    }
+
 
     public int getIdProduct() {
         return idProduct;

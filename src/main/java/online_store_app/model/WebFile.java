@@ -1,17 +1,18 @@
 package online_store_app.model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Lob;
-import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 
 
 @Entity
 @Table(name = "files")
 public class WebFile {
     @Id
-    private int webFileID;
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
+    private String webFileID;
     private String webFileName;
     private String webFileType;
     @Lob
@@ -19,12 +20,17 @@ public class WebFile {
 
     public WebFile() {
     }
-    public WebFile(String originalFileName, String originalFileType, byte[] originalFile) {
+
+    public WebFile(String webFileName, String webFileType, byte[] file) {
+        this.webFileName = webFileName;
+        this.webFileType = webFileType;
+        this.file = file;
     }
-    public int getWebFileID() {
+
+    public String getWebFileID() {
         return webFileID;
     }
-    public void setWebFileID(int webFileID) {
+    public void setWebFileID(String webFileID) {
         this.webFileID = webFileID;
     }
     public String getWebFileName() {

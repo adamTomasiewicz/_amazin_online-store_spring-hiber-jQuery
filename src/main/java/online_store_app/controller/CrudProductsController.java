@@ -32,7 +32,7 @@ public class CrudProductsController {
 //        }
 
         @PostMapping(value = "/product/book/create")
-        public String getJSON(@RequestBody String jsonString){
+        public String createBook(@RequestBody String jsonString){
                 System.out.println(jsonString);
                 Gson g = new Gson();
 
@@ -42,7 +42,7 @@ public class CrudProductsController {
         }
 
         @PutMapping (value = "/product/book/update")
-        public String ubdateBook(@RequestBody String jsonString){
+        public String updateBook(@RequestBody String jsonString){
             System.out.println(jsonString);
             Gson g = new Gson();
             bookDao.updateProduct(g.fromJson(jsonString, Book.class));
@@ -61,7 +61,7 @@ public class CrudProductsController {
 
 
         @PostMapping(value = "/product/boardgame/create")
-        public String getJSONbGame(@RequestBody String jsonString){
+        public String createBoardGame(@RequestBody String jsonString){
                 System.out.println(jsonString);
                 Gson g = new Gson();
                 boardGameDao.addProduct((BoardGame) g.fromJson(jsonString, BoardGame.class));
@@ -70,7 +70,7 @@ public class CrudProductsController {
         }
 
         @PutMapping (value = "/product/boardgame/update")
-        public String ubdateBoardgame(@RequestBody String jsonString){
+        public String updateBoardGame(@RequestBody String jsonString){
                 System.out.println(jsonString);
                 Gson g = new Gson();
                 boardGameDao.updateProduct(g.fromJson(jsonString, BoardGame.class));
@@ -79,7 +79,7 @@ public class CrudProductsController {
         }
 
         @DeleteMapping (value = "/product/boardgame/delete")
-        public String deleteBoardgame(@RequestBody String jsonString){
+        public String deleteBoardGame(@RequestBody String jsonString){
                 System.out.println(jsonString);
                 Gson g = new Gson();
                 boardGameDao.deleteProduct(g.fromJson(jsonString, BoardGame.class));
@@ -89,7 +89,7 @@ public class CrudProductsController {
 
 
         @PostMapping(value = "/product/videogame/create")
-        public String getJSONvGame(@RequestBody String jsonString){
+        public String createVideoGame(@RequestBody String jsonString){
                 System.out.println(jsonString);
                 Gson g = new Gson();
 
@@ -99,7 +99,7 @@ public class CrudProductsController {
         }
 
         @PutMapping (value = "/product/videogame/update")
-        public String ubdateVideogame(@RequestBody String jsonString){
+        public String updateVideoGame(@RequestBody String jsonString){
                 System.out.println(jsonString);
                 Gson g = new Gson();
                 videoGameDao.updateProduct(g.fromJson(jsonString, VideoGame.class));
@@ -108,7 +108,7 @@ public class CrudProductsController {
         }
 
         @DeleteMapping (value = "/product/videogame/delete")
-        public String deleteVideogame(@RequestBody String jsonString){
+        public String deleteVideoGame(@RequestBody String jsonString){
                 System.out.println(jsonString);
                 Gson g = new Gson();
                 videoGameDao.deleteProduct(g.fromJson(jsonString, VideoGame.class));

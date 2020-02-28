@@ -10,7 +10,7 @@ import javax.sql.DataSource;
 @Configuration
 @ComponentScan("online_store_app.services")
 @ComponentScan("online_store_app.dao")
-@ComponentScan("online_store_app.dao")
+@ComponentScan("online_store_app.repo")
 public class AppConfiguration {
     @Bean
     public DataSource datasource() {
@@ -20,7 +20,6 @@ public class AppConfiguration {
                 .username("postgres")
                 .password("postgres1")
                 .build();
-
     }
 
 }

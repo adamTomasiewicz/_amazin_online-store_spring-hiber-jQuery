@@ -1,4 +1,4 @@
-package online_store_app.repository;
+package online_store_app.repo;
 
 import online_store_app.model.WebFile;
 import org.springframework.data.jpa.repository.JpaRepository;
