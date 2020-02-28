@@ -1,3 +1,5 @@
+<a href="https://ibb.co/6YVg6d7"><img src="https://i.ibb.co/CBNhxr3/amazong.png" alt="amazong" border="0" /></a>
+
 -------
 ### ABOUT:
 --------
@@ -9,6 +11,7 @@ książki, gry planszowe i gry video
 -------
 ### BACK END:
 --------
+
 ```
 controller:
 -OnlineStoreController
@@ -23,25 +26,11 @@ service:
 pdf z ksiazka, jar/zip z grą, jpg z okladka
 
 ```
+<a href="https://ibb.co/2ShrrZT"><img src="https://i.ibb.co/dtMvvmR/file-Chooser.jpg" alt="file-Chooser" border="0" /></a>
+
 --------
 ### FRONT END i STRUNKTURA STRONY:
 --------
-
-![GitHub Logo](/images/amazong.png)
-Format: ![Alt Text](url)
-
-![GitHub Logo](/images/fileChooser.jpg)
-Format: ![Alt Text](url)
-
-amazong
-![amazong](https://ibb.co/6YVg6d7)
-
-aboutUs
-!(https://ibb.co/WPkkG9B)
-
-file Chooser
-!(https://ibb.co/2ShrrZT)
-
 
 ```
 kolorystyka:
@@ -59,7 +48,9 @@ podstrony:
 
 strony na których mozemy sie wzorować:
 ```
-#-spolecznosciówki
+<a href="https://ibb.co/WPkkG9B"><img src="https://i.ibb.co/jWyybK3/about-us.jpg" alt="about-us" border="0" /></a>
+
+#-spolecznosciówki na których się wzorowaliśmy
 - [https://www.facebook.com/](https://www.facebook.com/)
 - [https://www.linkedin.com/](https://www.linkedin.com/)
 - [https://github.com/](https://github.com/)
