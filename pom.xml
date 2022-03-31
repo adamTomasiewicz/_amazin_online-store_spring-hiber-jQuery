@@ -23,7 +23,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!-- VERSIONS -->
-        <spring-framework-boot.version>2.2.4.RELEASE</spring-framework-boot.version>
+        <spring-framework-boot.version>2.5.12</spring-framework-boot.version>
         <spring-framework.version>5.2.2.RELEASE</spring-framework.version>
         <hibernate.version>5.4.10.Final</hibernate.version>
         <postgresql.version>42.2.10</postgresql.version>
